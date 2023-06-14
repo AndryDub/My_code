@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Position</title>
+
+</head>
+<body>
+
+<h1>position: static</h1>
+	<div style="background: #f0f; width: 500px;">
+		Без позиционирования ("position: static").
+		<h2 style="background: #aef; margin: 0">Заголовок></h2>
+		<div>
+			А тут - всякий разный текст... <br/>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, delectus, minima error nulla repellat officiis nisi nobis eos ullam doloribus laborum cum quos quam, iure ab voluptate necessitatibus aliquam officia?
+		</div>
+	</div>
+<hr>
+
+<h1>position: relative</h1>
+	<div style="background: rgb(0, 214, 252); width: 500px;">
+	Заголовок сдвинут на 10px вниз ("position: relative).
+	<h2 style="background: #aef; margin: 0; position: relative;
+	top: 10px;">
+		Заголовок
+	</h2>
+		<div>
+			А тут - всякий разный текст... <br/>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, delectus, minima error nulla repellat officiis nisi nobis eos ullam doloribus laborum cum quos quam, iure ab voluptate necessitatibus aliquam officia?
+		</div>
+	</div>
+<hr>
+
+	<div style="background: rgb(150, 0, 250); width: 500px;">
+		Заголовок сдвинут на -10% влево ("position: relative - отрицательные координаты).
+		<h2 style="background: #aef; margin: 0; position: relative; left: -10%;">
+			Заголовок
+		</h2>
+		<div>
+			А тут - всякий разный текст... <br/>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, delectus, minima error nulla repellat officiis nisi nobis eos ullam doloribus laborum cum quos quam, iure ab voluptate necessitatibus aliquam officia?
+		</div>
+	</div>
+<hr>
+
+<h1>position: absolute</h1>
+	<div style="background: #aef; width: 500px;">
+		Заголовок в правом-верхнем углу документа, <span style="background: red;">выделен красным цветом</span> ("через - position: absolute).<br>
+		В отличии от <span style="color: red;">relative:</span> так как элемент удаляется со своего обычного места, то элементы под ним сдвигаются, занимая освободившееся пространство. Это видно в примере: строки идут одна за другой.
+		<h2 style="background: rgb(255, 0, 0); margin: 0; position: absolute; right: 0; top: 0;">
+			Заголовок
+		</h2>
+		<div>
+			А тут - всякий разный текст... <br/>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, delectus, minima error nulla repellat officiis nisi nobis eos ullam doloribus laborum cum quos quam, iure ab voluptate necessitatibus aliquam officia?
+		</div>
+	</div>
+<hr>
+
+	<!-- <div style="background:#aef;text-align:center; position: absolute; left: 10px; right: 10px; top: 10px; bottom: 10px;">
+		10px от границ
+	</div> -->
+
+<h1>position: absolute в позиционированном родителе</h1>
+<div style="background:#aef; width: 500px; position: relative;">
+	Заголовок в правом-верхнем углу DIV'а ("через - position: absolute в позиционированном родителе). Нужно пользоваться таким позиционированием с осторожностью, т.к оно может перекрыть текст. <spam style="background: #f0f; color: rgb(255, 196, 0);">Этим оно отличается от float.</spam>
+	<h2 style="background: #aef; margin: 0; border: 3px solid red; position: absolute; right: 0; top: 0;">
+		Заголовок
+	</h2>
+	<div>
+		А тут - всякий разный текст... <br/>
+		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, delectus, minima error nulla repellat officiis nisi nobis eos ullam doloribus laborum cum quos quam, iure ab voluptate necessitatibus aliquam officia?
+	</div>
+</div>
+<hr>
+
+<div style="width: 500px; background: #aef;">
+	<button style="float: right; margin: 0 10px; opacity: 0.8;">
+	Кнопка
+</button>
+1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9
+</div>
+<hr>
+
+<h1>position: fixed</h1>
+	<p>Позиционирует объект точно так же, как absolute, но относительно window.<br>
+		Разница в нескольких словах:<br>
+		Когда страницу прокручивают, фиксированный элемент остаётся на своём месте и не прокручивается вместе со страницей.<br>
+		В следующем примере, при прокрутке документа, ссылка #top всегда остаётся на своём месте.</p>
+<div>
+		<a style="position: fixed;
+		right: 10px;
+		top: 10px;
+		background: rgb(0, 255, 85);"
+		href="#">Наверх (остаётся при прокрутке)</a>
+				Фиксированное позиционирование.
+		
+		<p>Текст страницы.. Прокрути меня...</p>
+		<p>Много строк..</p><p>Много строк..</p>
+		<p>Много строк..</p><p>Много строк..</p>
+		<p>Много строк..</p><p>Много строк..</p>
+		<p>Много строк..</p><p>Много строк..</p>
+	</div>
+<hr>
+
+<h1>Итого</h1>
+Виды позиционирования и их особенности.<br>
+
+static<br>
+Иначе называется «без позиционирования». В явном виде задаётся только если надо переопределить другое правило CSS.<br>
+relative<br>
+Сдвигает элемент относительно текущего места.<br>
+Противоположные границы left/right (top/bottom) одновременно указать нельзя.<br>
+Окружающие элементы ведут себя так, как будто элемент не сдвигался.<br>
+absolute<br>
+Визуально переносит элемент на новое место.<br>
+
+Новое место вычисляется по координатам left/top/right/bottom относительно ближайшего позиционированного родителя. Если такого родителя нет, то им считается окно.<br>
+
+Ширина элемента по умолчанию устанавливается по содержимому.<br>
+Можно указать противоположные границы left/right (top/bottom). Элемент растянется.<br>
+Окружающие элементы заполняют освободившееся место.<br>
+fixed<br>
+Подвид абсолютного позиционирования, при котором элемент привязывается к координатам окна, а не документа.<br>
+
+При прокрутке он остаётся на том же месте.<br>
+
+Почитать<br>
+CSS-позиционирование по-настоящему глубоко в спецификации Visual Formatting Model, 9.3 и ниже.<br>
+
+Ещё есть хорошее руководство CSS Positioning in 10 steps, которое охватывает основные типы позиционирования.<br>
+
+
+</body>
+</html>

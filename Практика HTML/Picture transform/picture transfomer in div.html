@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		.img-scale{
+			display: inline-block; /*Строчно-блочный элемент*/
+			overflow: hidden; /*Скрываем всё за контуром*/
+		}
+
+		.img-scale img{
+			transition: 1s; /*Время эффекта*/
+			display: block; /*Убираем небольшой отступ снизу*/
+		}
+
+		.img-scale img:hover{
+			transform: scale(1.2); /*Увеличиваем масштаб*/
+		}
+	</style>
+
+	<title>Как изменить размер картинки при наведении на неё курсора мыши, для увеличения изображения, не увеличивая при этом размер картинки</title>
+</head>
+<body>
+	<div class="img-scale">
+		<img src="6.jpg" alt="img"
+	</div>
+</body>
+</html>

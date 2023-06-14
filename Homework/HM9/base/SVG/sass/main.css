@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.layer rect {
+  cursor: pointer;
+}
+.layer rect:hover {
+  stroke: blue;
+  fill: rgb(181, 39, 209);
+  transition: all 3s ease-in-out;
+  filter: hue-rotate(300deg);
+  transform: scale(1.2);
+}
+
+.layer rect:last-child {
+  cursor: pointer;
+}
+.layer rect:last-child:hover {
+  stroke: rgb(0, 255, 0);
+  fill: rgb(0, 243, 53);
+  transition: all 3s ease-in-out;
+  filter: hue-rotate(-300deg);
+  transform: scale(1);
+}
+
+.layer path {
+  cursor: pointer;
+}
+.layer path:hover {
+  stroke: blue;
+  fill: rgb(52, 226, 36);
+  transition: all 3s ease-in-out;
+  filter: hue-rotate(300deg);
+  transform: scale(1.2);
+}
+
+.layer path:last-child {
+  cursor: pointer;
+}
+.layer path:last-child:hover {
+  stroke: rgb(0, 255, 0);
+  fill: rgb(243, 227, 0);
+  transition: all 3s ease-in-out;
+  filter: hue-rotate(-300deg);
+  transform: scale(1);
+  transform: rotate(180deg);
+}/*# sourceMappingURL=main.css.map */

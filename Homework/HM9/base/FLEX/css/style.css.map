@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAoCA,QAAS;EACR,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,QAAQ;EACnB,UAAU,EAAE,MAAM;;;ACvCnB,OAAO;EACN,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,OAAiB;;;ACH9B,MAAO;EAEN,gBAAgB,EAAE,OAAO;EACzB,IAAI,EAAE,MAAM;EAIZ,KAAK,EAAE,KAAK;;;ACPb,OAAQ;EAGP,gBAAgB,EAAE,OAAO",
+"sources": ["../sass/base/_base.scss","../sass/blocks/_header.scss","../sass/blocks/_aside.scss","../sass/blocks/_footer.scss"],
+"names": [],
+"file": "style.css"
+}

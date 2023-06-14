@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="css/stars.css"> -->
+<style>
+	.parent {
+	margin: 0;
+	padding: 0;
+	/* display: block; */
+	/* display: flex; */
+	/* justify-content: start; */
+	/* flex-direction: row-reverse; */
+	cursor: pointer;
+	}
+
+/* .star {
+	display: flex;
+	justify-content: start;
+	flex-direction: row-reverse;
+	cursor: pointer;
+} */
+
+.img {
+	display: inline-block;
+	width: 90px;
+	height: 80px;
+	list-style-type: none;
+	background: url('img/star0.png') no-repeat;
+	transition: 0.5s;
+}
+
+.img:hover, .img:hover ~ .img{
+	background: url('img/star1.png') no-repeat;
+}
+
+.img:active, .img:active ~.img{
+	background: url('img/star0.png') no-repeat;
+}
+</style>
+
+	<title>Stars</title>
+
+</head>
+
+<body>
+
+	<ul class="parent">
+		<!-- <ul class="star"> также можно сделать на ul-ах, как и на div-ах -->
+			<div class="img"></div>
+			<div class="img"></div>
+			<div class="img"></div>
+			<div class="img"></div>
+			<div class="img"></div>
+		<!-- </ul> -->
+	</div>
+		
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.layer rect {
+  cursor: pointer;
+}
+.layer rect:hover {
+  stroke: blue;
+  fill: #b527d1;
+  -webkit-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+  -webkit-filter: hue-rotate(300deg);
+          filter: hue-rotate(300deg);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.layer rect:last-child {
+  cursor: pointer;
+}
+.layer rect:last-child:hover {
+  stroke: lime;
+  fill: #00f335;
+  -webkit-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+  -webkit-filter: hue-rotate(-300deg);
+          filter: hue-rotate(-300deg);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.layer path {
+  cursor: pointer;
+}
+.layer path:hover {
+  stroke: blue;
+  fill: #34e224;
+  -webkit-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+  -webkit-filter: hue-rotate(300deg);
+          filter: hue-rotate(300deg);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.layer path:last-child {
+  cursor: pointer;
+}
+.layer path:last-child:hover {
+  stroke: lime;
+  fill: #f3e300;
+  -webkit-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+  -webkit-filter: hue-rotate(-300deg);
+          filter: hue-rotate(-300deg);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/*# sourceMappingURL=main.css.map */

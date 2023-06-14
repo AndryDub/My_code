@@ -1,0 +1,198 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+}
+
+body{
+	width: 100%;	
+	height: 100%;	
+	font-family: 'Armata',sans-serif;
+	line-height: 1.3;
+	color: #373737;
+	background: #f7f7f7;
+}
+	
+.container{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 950px;
+	background: rgba(233, 233, 41, 0.521);
+}
+
+/* --Верхний блок "Шапка страницы" -- */
+.logo-top{
+	background: rgba(113, 162, 226, 0.568);
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+h2{
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 1px;
+	word-spacing: 5px;
+	color: blue;
+}
+
+/* --  -- */
+
+.aside-list{
+	width: 200px;
+	height: 100%;
+	float: left;
+}
+
+h4{
+	letter-spacing: 1px;
+	word-spacing: 3px;
+	font-weight: 800;
+	text-align: center;
+	color: #222222;
+	padding: 0 20px;
+	width: fit-content;
+	display: block;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.widget{
+	padding: 15px 10px;
+	/*background: white;*/
+	font-size: 14px;
+	/*margin-bottom: 30px;*/
+	box-shadow: 3px 3px 1 rgba(0, 0, 0, .05);
+}
+
+.widget-title{
+	text-align: center;
+	/*padding: 10px;*/
+	/*margin-bottom: 20px;*/
+	border: 2px solid  #cca878;
+	box-shadow: 3px 3px 0 0 #800080;
+	margin-bottom: 10px;
+}
+
+.widget-categori-list{
+	padding-left: 25px;
+}
+
+.widget-categori-list li{
+	border-bottom: 1px solid #cca878;
+	padding: 5px 0;
+	color: #cca878;
+	/*list-style-type: disc;*/
+	line-height: 1;
+	/*width: fit-content;*/
+}
+
+.widget-categori-list a{
+	font-size: 14px;
+	color: #222222; /* Цвет ссылки */
+	text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+.widget-categori-list a:hover {
+	color: #dd3e3e; /* Цвет ссылки при наведении на нее курсора мыши */  
+}
+
+/*.widget-categori-list a:visited {
+	color: #800080; /* Цвет посещённой ссылки 
+}*/ /* -- НЕ СРАБАТЫВАЕТ!!!  -- */ 
+
+
+
+/*  -- СТИЛИ ДЛЯ БЛОКА С ОЛСНОВНЫМ СОДЕРЖИМЫМ --  */
+
+/* -- Правый контейнер -- */
+
+.posts-list{
+	background: #fff;
+	margin-left: 200px;
+	min-height: 100%;
+}
+
+h3{
+	letter-spacing: 1px;
+	word-spacing: 3px;
+	text-align: center;
+	color: #222222;
+	padding: 20px;
+	display: block;
+	width: fit-content;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+.widget-content{
+	font-size: 22px;
+	/*text-align: center;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 2px solid #bbafa0;
+	box-shadow: 3px 3px 0 0 #800080;*/
+}
+
+.fig{
+	display: block;
+	width: 100%;
+	height: auto;
+	padding: 10px;
+	margin: 0 10px 5px 0;
+	max-width: 300px;
+	object-fit: cover;
+	float: left;
+}
+
+p{
+	text-align: justify;
+	padding: 10px ;
+}
+
+/* -- Нижний блок "ПОДВАЛ" --*/
+
+.logo-bottom{
+	background: rgba(113, 162, 226, 0.568);
+	padding: 20px;
+}
+h2{
+	font-size: 32px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 1px;
+	word-spacing: 5px;
+	color: blue;
+}
+
+/* -- Медиа запрос -- */
+/* - отменяем обтекание левой и правой колонок, устанавливаем им ширину 100% - */
+
+/*.posts-list, .aside-left{
+	width: 100%;
+	float: none;
+}*/
+
+/*
+*, *::after, *::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	transition: .5s ease-in-out;
+}
+
+
+
+li{
+	color: #222;
+}
+
+a{
+	text-decoration: none;
+	outline: none;
+}
+
+
+*/
+
+/*добавим очистку потока для всех контейнеров, внутри которых задано обтекание дочерних элементов */

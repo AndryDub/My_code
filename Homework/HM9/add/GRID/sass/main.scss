@@ -1,0 +1,169 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Armata", sans-serif;
+	line-height: 1.3;
+	color: #373737;
+	font-size: 18px;
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 200px auto;
+	grid-template-rows: 15vh auto 15vh;
+	padding: 10px 15px;
+}
+
+header {
+	display: grid;
+	grid-column: 1/3;
+	grid-row: 1;
+	align-items: center;
+	justify-content: center;
+	background: rgb(94, 157, 239);
+	h2 {
+		text-align: center;
+		font-weight: 600;
+		letter-spacing: 1px;
+		word-spacing: 5px;
+		color: blue;
+	}
+}
+
+content {
+	grid-column: 1/3;
+	grid-row: 2;
+	display: flex;
+	min-height: calc(100vh-30vh);
+	.img_boll {
+		background: url("../img/boll.png") right top repeat-y;
+	}
+}
+
+article {
+	// display: flex;
+	// flex-direction: column;
+	// order: 0;
+	padding: 10px;
+	h3 {
+		letter-spacing: 1px;
+		word-spacing: 3px;
+		text-align: center;
+		color: #222222;
+		padding: 20px;
+	}
+	p {
+		font-size: 28px;
+		text-align: justify;
+		padding: 10px;
+	}
+	.fig {
+		width: 100%;
+		height: auto;
+		padding: 10px;
+		margin: 0 10px 5px 0;
+		max-width: 500px;
+		// object-fit: cover;
+		float: left;
+	}
+}
+
+nav {
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 300px;
+	order: -1;
+	padding: 15px 5px;
+	background-image: url("../img/300px_1200px.png");
+	h4 {
+		text-align: center;
+		font-size: 24px;
+		font-weight: 700;
+		margin: 15px 0;
+	}
+	ul {
+		padding-left: 35px;
+	}
+	li {
+		color: #cca878;
+		line-height: 1.5;
+	}
+	a {
+		font-size: 22px;
+		color: #222222;
+		text-decoration: none;
+		&:visited {
+			color: #bf16bf;
+		}
+		&:hover {
+			color: #dd3e3e;
+			text-decoration: underline;
+			transition: 0.3s ease-in-out;
+		}
+	}
+}
+
+footer {
+	display: grid;
+	grid-column: 1/3;
+	grid-row: 3;
+	align-items: center;
+	justify-content: center;
+	background: rgb(94, 157, 239);
+	h2 {
+		text-align: center;
+		font-weight: 600;
+		letter-spacing: 1px;
+		word-spacing: 5px;
+		color: blue;
+	}
+}
+
+@media all and (max-width: 580px) {
+	content {
+		flex-direction: column;
+		.img_boll {
+			background: none;
+		}
+	}
+
+	article {
+		order: 1;
+	}
+
+	nav {
+		background-image: none;
+		order: 0;
+		padding: 0 5px;
+		h4 {
+			text-align: start;
+		}
+		ul {
+			list-style-type: none;
+			padding-left: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: start;
+			flex-direction: row;
+		}
+		li{
+			margin-right: 30px;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+
+	header,
+	footer {
+		display: none;
+		// visibility: hidden;
+	}
+}

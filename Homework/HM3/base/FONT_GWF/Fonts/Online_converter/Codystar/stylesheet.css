@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Italic.eot');
+    src: url('Roboto-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Roboto-Italic.woff2') format('woff2'),
+        url('Roboto-Italic.woff') format('woff'),
+        url('Roboto-Italic.ttf') format('truetype'),
+        url('Roboto-Italic.svg#Roboto-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant SC';
+    src: url('CormorantSC-Medium.eot');
+    src: url('CormorantSC-Medium.eot?#iefix') format('embedded-opentype'),
+        url('CormorantSC-Medium.woff2') format('woff2'),
+        url('CormorantSC-Medium.woff') format('woff'),
+        url('CormorantSC-Medium.ttf') format('truetype'),
+        url('CormorantSC-Medium.svg#CormorantSC-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans SemiCondensed';
+    src: url('OpenSansSemiCondensed-Regular.eot');
+    src: url('OpenSansSemiCondensed-Regular.eot?#iefix') format('embedded-opentype'),
+        url('OpenSansSemiCondensed-Regular.woff2') format('woff2'),
+        url('OpenSansSemiCondensed-Regular.woff') format('woff'),
+        url('OpenSansSemiCondensed-Regular.ttf') format('truetype'),
+        url('OpenSansSemiCondensed-Regular.svg#OpenSansSemiCondensed-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Codystar';
+    src: url('Codystar-Light.eot');
+    src: url('Codystar-Light.eot?#iefix') format('embedded-opentype'),
+        url('Codystar-Light.woff2') format('woff2'),
+        url('Codystar-Light.woff') format('woff'),
+        url('Codystar-Light.ttf') format('truetype'),
+        url('Codystar-Light.svg#Codystar-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+

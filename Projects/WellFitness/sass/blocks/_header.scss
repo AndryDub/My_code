@@ -1,0 +1,138 @@
+header {
+	width: 1920px;
+	height: auto;
+	top: calc(50% - 203px / 2 - 3924px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-image: url("../img/header/header.png");
+	
+	// чтобы сработал фон, нужно задать высоту height в px
+	// background: #1a1a25;
+	// box-shadow: 0px 10px 50px rgba(133, 143, 164, 0.05);
+
+	.conteiner_header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 24px 0px 20px;
+		width: 1410px;
+		height: 82px;
+		background: #1a1a25;
+		margin-left: auto;
+	margin-right: auto;
+		img {
+			width: 280px;
+			height: 28.9px;
+		}
+		.btn_dropdown_city {
+			select {
+				width: auto;
+				border: 1px solid #858fa4;
+				border-radius: 5px;
+				background: #1a1a25;
+				font-size: 14px;
+				line-height: 140%;
+				color: #858fa4;
+				cursor: pointer;
+				margin-left: 50px;
+			}
+		}
+
+		.partners {
+			margin-left: auto;
+			ul {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 30px;
+				width: 290px;
+				height: 37px;
+				.btn_for_partners {
+					position: relative;
+					padding: 10px;
+					width: 144px;
+					height: 37px;
+					// border: 1px solid rgba(144, 156, 181, 0.5);
+					border-radius: 6px;
+					/* txt / button */
+					font-family: "Inter", sans-serif;
+					font-weight: 700;
+					font-size: 14px;
+					line-height: 17px;
+					color: #858fa4;
+				}
+				.btn_for_dealers {
+					padding: 10px;
+					width: 112px;
+					height: 37px;
+					// border: 1px solid rgba(144, 156, 181, 0.5);
+					border-radius: 6px;
+					/* txt / button */
+					font-family: "Inter", sans-serif;
+					font-weight: 700;
+					font-size: 14px;
+					line-height: 17px;
+					color: #858fa4;
+				}
+			}
+			.btn_for_dealers:hover,
+			.btn_for_partners:hover {
+				background: #384255;
+				color: #ffffff;
+			}
+		}
+
+		.contacts {
+			margin-left: 30px;
+			ul {
+				display: flex;
+				align-items: center;
+				padding: 5px 30px;
+				border-left: 1px solid rgba(133, 143, 164, 0.15);
+				border-right: 1px solid rgba(133, 143, 164, 0.15);
+				li:first-child a {
+					font-family: "Inter", sans-serif;
+					font-weight: 500;
+					font-size: 14px;
+					line-height: 17px;
+					color: #ffffff;
+				}
+				li:nth-child(2) select {
+					border: 1px solid transparent;
+					background: #1a1a25;
+					font-size: 14px;
+					line-height: 140%;
+					color: #858fa4;
+					cursor: pointer;
+					line-height: 17px;
+					color: #909cb5;
+				}
+				li:last-child a {
+					font-size: 14px;
+					line-height: 140%;
+					color: #f53b49;
+					margin-left: 26px;
+					white-space: nowrap;
+				}
+			}
+		}
+		.btn_come_in {
+			margin-left: 30px;
+			a {
+				display: flex;
+				align-items: center;
+				width: 76px;
+				height: 20px;
+				padding: 8.5px 0;
+				gap: 14px;
+				/* txt/meny2 */
+				font-size: 14px;
+				line-height: 140%;
+				color: #ffffff;
+				cursor: pointer;
+			}
+		}
+	}
+}

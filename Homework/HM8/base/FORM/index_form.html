@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style_form.css">
+	<link rel="stylesheet" href="css/media_form.css">
+
+	<title>Form_8a</title>
+
+</head>
+
+<body>
+
+
+	<form action="#" method="get" enctype="multipart/form-data">
+
+		<legend>Для публикации вашей статьи заполните, пожалуйста, следующие формы:</legend>
+
+
+		<div class="article_title">
+			<label for="article_title">Название статьи:</label>
+		</div>
+		<div class="article">
+			<input class="article_input" tabindex="1" placeholder="Поле ввода" type="text" name="article_title" value="">
+		</div>
+
+
+		<div class="it">
+			<label for="IT">Рубрика:</label>
+		</div>
+		<div class="heading">
+			<select class="select" tabindex="2" name="IT">
+				<option value="Computer technology">Компьютерная техника</option>
+				<option value="Graphics and design">Графика и дизайн</option>
+				<option selected value="Programming">Программирование</option>
+			</select>
+		</div>
+
+
+		<div class="publication">
+			<label for="publication">Публикация:</label>
+		</div>
+		<div class="radio">
+			<div>
+				<p><input tabindex="3" type="radio" name="program" value="On the site">
+					<label for="program">на сайте</label>
+				</p>
+			</div>
+			<div>
+				<p><input tabindex="3" type="radio" name="program" value="In the journal">
+					<label for="program">в журнале</label>
+				</p>
+			</div>
+			<div>
+				<p><input tabindex="3" type="radio" name="program" value="website and magazine">
+					<label for="program">на сайте и в журнале</label>
+				</p>
+			</div>
+		</div>
+
+
+		<div class="allow_comments">
+			<label class="lable" for="allow_comments">Разрешите комментарии:</label>
+		</div>
+		<div class="checkbox">
+			<input tabindex="4" checked type="checkbox" name="allow_comments" value="yes">
+		</div>
+
+
+		<label for="description">Текст статьи:</label>
+		<div class="description">
+			<textarea class="description_text" tabindex="5" name="text"></textarea>
+		</div>
+
+
+		<div>
+			<input class="submit" tabindex="6" type="submit" value="Опубликовать">
+		</div>
+
+	</form>
+
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+// !!! block_main_customer assistance - помощь клиенту
+
+.customer_assistance {
+	padding: 125px 0px 40px;
+	width: 1408px;
+	height: 500px;
+	margin: 0 auto;
+	ul {
+		display: grid;
+		grid-template-columns: repeat(4, 352px);
+		grid-template-rows: repeat(1, 305px);
+		background: #ffffff;
+		border: 1px solid rgba(133, 143, 164, 0.2);
+		border-radius: 6px 0px 0px 6px;
+		fill: #f53b49;
+		// stroke: #F53B49;
+		li {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			padding: 102px 46.5px 25px;
+			border: 1px solid rgba(133, 143, 164, 0.2);
+			// border: 1px solid red;
+			transition: 0.8s;
+			svg {
+				position: absolute;
+				width: 72px;
+				height: 72px;
+				fill: inherit;
+				// stroke: inherit;
+				left: 140px;
+				top: 30px;
+			}
+			h3 {
+				margin-top: 20px;
+				width: 259px;
+				height: 48px;
+			}
+			p {
+				font-size: 16px;
+				line-height: 150%;
+				text-align: center;
+				color: #384255;
+				width: 257.51px;
+				height: 72px;
+			}
+			a {
+				margin-top: 20px;
+				position: absolute;
+				width: 259px;
+				height: 17px;
+				position: relative;
+				font-family: "Inter", sans-serif;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 17px;
+				color: #f53b49;
+				&::after {
+					content: "";
+					background: url("../img/main/main_customer_assistance/arrow.png") no-repeat;
+					position: absolute;
+					// padding: 2px 0px 0px;
+					width: 10px;
+					height: 14px;
+					margin-left: 8px;
+					// top: 1.5px;
+				}
+			}
+
+			&:hover {
+				padding: 75px 30px 20px;
+				background: #f53b49;
+				fill: white;
+				transform: scale(1.16);
+				border-radius: 6px;
+				transition: all 0.8s ease-in-out;
+				border: none;
+				svg {
+					left: 30px;
+					top: 20px;
+					// transform: translateX(-55px, 0);
+					transition: 0.3s;
+				}
+				h3 {
+					text-align: start;
+					color: white;
+					width: 170px;
+					line-height: 100%;
+					// transition: 0.8s;
+				}
+				p {
+					text-align: start;
+					color: white;
+					width: 185px;
+					height: 135px;
+					line-height: 130%;
+					margin-top: 10px;
+					// transition: 0.8s;
+				}
+				a {
+					margin-top: 10px;
+					text-align: start;
+					color: white;
+					width: 170px;
+					// transition: 1.8s;
+				}
+				&::before {
+					content: "";
+					background: url("../img/main/main_customer_assistance/hand_phone.png") no-repeat;
+					// background-size: 95%;
+					width: 136px;
+					height: 195px;
+					position: absolute;
+					right: 0;
+					bottom: 0;
+					border-radius: 6px;
+					// transition: 0.8s;
+					// время, которое элемент должен ждать после наведения курсора
+					// transition-delay: 1.5s;
+				}
+			}
+		}
+	}
+}

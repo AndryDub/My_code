@@ -1,0 +1,129 @@
+// !!! block_main_become_partner - стать партнером
+
+.become_partner {
+	display: flex;
+	flex-direction: row;
+	// align-items: center;
+	justify-content: space-between;
+	width: 1410px;
+	height: 396px;
+	margin: 0 auto;
+	background: #1a1a25;
+	z-index: 0;
+	margin-top: 80px;
+	gap: 141px;
+	position: relative;
+	ul.abstraction {
+		position: absolute;
+		width: 484px;
+		height: 390px;
+		top: 6.87px;
+		left: 88px;
+		li:nth-child(1) {
+			position: absolute;
+			width: 484px;
+			height: 390px;
+			transform: rotate(-0.1deg);
+			top: 54px;
+			left: 26px;
+		}
+		li:nth-child(2) {
+			position: absolute;
+			width: 288px;
+			height: 309px;
+			top: 79px;
+			left: 97px;
+			// background: #f53b49;
+		}
+		li:nth-child(3) {
+			position: absolute;
+			transform: rotate(0.1deg);
+			top: 30px;
+			left: -3px;
+		}
+		li:nth-child(4) {
+			position: absolute;
+			width: 253px;
+			height: 198px;
+			right: 36px;
+			bottom: 0.2px;
+			// вместо img=rectangle_white.png, можно задатьчерез фоновое изображением
+			// background: linear-gradient(196.18deg, rgba(255, 255, 255, 0.2) -8.91%, rgba(0, 0, 0, 0) 88.75%), #f0f0f4;
+			// box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+		li:nth-child(5) {
+			position: absolute;
+			width: 132.99px;
+			height: 225.96px;
+			transform: rotate(1.08deg);
+			left: 28px;
+			top: 208px;
+		}
+		li:nth-child(6) {
+			position: absolute;
+			width: 128px;
+			height: 127px;
+			left: 238px;
+			top: 216px;
+		}
+		li:nth-child(7) {
+			position: absolute;
+			width: 172px;
+			height: 160px;
+			right: 36px;
+			top: 230px;
+		}
+		li:nth-child(8) {
+			position: absolute;
+			width: 66.26px;
+			height: 43.03px;
+			left: 214px;
+			top: 222px;
+		}
+	}
+	ul.partner {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0px;
+		gap: 30px;
+		position: absolute;
+		width: 572px;
+		height: 244px;
+		top: 77px;
+		right: 125px;
+		li:nth-child(1) {
+			h2 {
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 500;
+				font-size: 36px;
+				line-height: 120%;
+				color: #ffffff;
+				span {
+					color: #f53b49;
+				}
+			}
+		}
+		li:nth-child(2) {
+			// !!! btn_become_partner - стать партнёром + gradient_border
+			.btn_become_partner {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				padding: 12px 20px 13px;
+				gap: 10px;
+				width: 171px;
+				height: 42px;
+				border-radius: 4px;
+				/* txt / button */
+				font-family: "Inter";
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 17px;
+				color: #ffffff;
+			}
+		}
+	}
+}

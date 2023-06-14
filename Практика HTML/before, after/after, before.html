@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+	
+	/*h3:before{
+		content:'-+-+-+-'
+	}
+
+	h3:after{
+		content:'-------'
+	}*/ /*относить к первой части*/ 
+
+	/*h3{
+		counter-reset: planet;
+	}
+	p:before{
+		counter-increment: planet;
+		content: 'Планета 'counter(planet)'.';
+	}*/ /*/*относить ко второй части*/ 
+
+	b::before{
+		content: '((('; color: blue;
+	}
+	b::after{
+		content: ')))'; color: rgb(43, 255, 0);
+	}
+	p::before{
+		content: url('img/ball.gif') /*можно добавлять любое изображение*/
+	}
+	[data-bookref]::after{
+		content: '['attr(data-bookref)']';
+		font-size: 67%;
+		position: relative;
+		top: -0.4em;
+	} /*относить к третьей части*/
+</style>
+
+	<title>Before, After</title>
+
+</head>
+<body>
+	<!--
+	<h3>Hello</h3>
+	<h3>World</h3>
+	<h3>Apple</h3>
+<hr>--> <!--Первая часть-->
+
+
+<!--
+<h3>Планеты до Земли</h3>
+<p>Меркурий</p><p>Венера</p>
+<h3>Планеты после Земли</h3>
+<p>Марс</p><p>Юпитер</p><p>Сатурн</p>
+<hr>--> <!--Вторая часть-->
+
+
+<h3>Муравьиная <b>СЕМЬЯ</b></h3>
+<p>Муравьиные семьи могут существовать на протяжении <b>долгого</b> периода времени.<br>
+	Информация взята из <span data-bookref="БСС, стр.25">надёжных источников</span>.
+</p> <!--Третья часть-->
+
+</body>
+</html>

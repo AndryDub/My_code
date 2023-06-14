@@ -1,0 +1,88 @@
+// !!! block_main_banner_list - баннер лист
+
+.banner_list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 36px;
+	margin-left: auto;
+	margin-right: auto;
+	ul {
+		position: relative;
+		width: 1800px;
+		height: 500px;
+		border-radius: 10px;
+		background-image: url("../img/main/main_banner_list/banner_1.png");
+		li:nth-child(1) {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 512.8px;
+			height: 336px;
+			left: 203px;
+			top: 83px;
+			h6 {
+				width: 512.8px;
+				height: 26px;
+				font-family: "Inter", sans-serif;
+				font-weight: 900;
+				font-size: 24px;
+				line-height: 110%;
+				text-transform: uppercase;
+				color: #f53b49;
+				margin-bottom: 12px;
+			}
+			h4 {
+				width: 512.8px;
+				height: 220px;
+				font-family: "Inter", sans-serif;
+				font-weight: 900;
+				font-size: 49.5455px;
+				line-height: 110%;
+				text-transform: uppercase;
+				color: #1a1a25;
+				margin-bottom: 24px;
+				span {
+					font-weight: 400;
+				}
+			}
+			// btn_banner - баннер
+			.btn_banner {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				padding: 12px 20px 13px;
+				gap: 10px;
+				width: 155px;
+				height: 42px;
+				border: 1px solid #f53b49;
+				border-radius: 4px;
+				font-family: "Inter", sans-serif;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 17px;
+				color: #f53b49;
+			}
+		}
+	}
+	
+	// !!! btn_scroll - кнопки перелистывания изображений (слайдов)
+	.btn_scroll_banner_left {
+		position: absolute;
+		// background-image: url("../sass/img/main/main_banner_list/стрелки.png");
+		width: 50px;
+		height: 50px;
+		right: 255px;
+		bottom: 50px;
+	}
+	.btn_scroll_banner_right {
+		position: absolute;
+		// background-image: url("../sass/img/main/main_banner_list/стрелки.png");
+		width: 50px;
+		height: 50px;
+		right: 195px;
+		bottom: 50px;
+	}
+}

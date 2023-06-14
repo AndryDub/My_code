@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		
+		body{
+			height: 1000px;
+		}
+
+		img{
+			width: 100px;
+			height: auto;
+		}
+
+	</style>
+
+	<title>Block</title>
+	
+</head>
+<body>
+
+	<div style="text-align: center; 
+			padding: 20px; 
+			background-color: rgba(208, 255, 0, 0.479)">
+			ПОДХОД №2<br>Перекрытие фона контейнера фоном столбца
+	</div>
+			<div style="background: url('img/left_img_15_yellow.png');">	
+				<div style="width: 30%; 
+					float: left;
+					padding: 10px;">
+					Главная<br>Меню<br>Левое поле
+				</div>
+						<div style="margin-left: 32%; 
+								background: url('img/left_img_15_blue.png');
+								padding: 10px;
+								text-align: justify;">
+							<!--Фон из мячей -- <div style="background-image: url('img/ball.gif') right top repeat-y;">
+							</div>-->
+							<p style="text-align: center;">
+								Контент<br>Центральное поле
+							</p>
+								Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент
+								<!--Если "контент" будет меньше "меню", то фон "контента" не будет перекывать "меню"-->
+							</div>
+								<div style="clear: both;
+									background-color: rgb(148, 189, 192); 
+									text-align: center; 
+									padding: 20px;">
+									Подвал<br>Материалы для сайта предоставили...
+								</div>
+					</div><br>		
+	<hr>
+
+	<div style="text-align: center; 
+			margin-top: 100px;
+			padding: 20px; 
+			background-color: rgba(72, 255, 0, 0.616)">
+			ЛУЧШИЙ САЙТ ИНТЕРНЕТА!
+	</div>
+		<div style="background: url('img/boll.png') left bottom no-repeat;">
+			<div style="background: url('img/wall_center15b85.png') 15% top repeat-y;">
+				<div style="background: url('img/right_img_200px.png') right top repeat-y;">
+
+				<div style="width: 15%; 
+					padding: 10px; 
+					float: left">
+					Главная<br>Меню<br>Левое поле
+				</div>
+					<div style="width: 200px; 
+							padding: 10px; 
+							float: right">
+							Банеры<br>Реклама<br>Правое поле
+					</div>
+						<div style="margin-left: 15%; 
+								margin-right: 200px; 
+								padding: 10px;
+								text-align: justify;">
+							<!--Фон из мячей -- <div style="background-image: url('img/ball.gif') right top repeat-y;">
+							</div>-->
+							<p style="text-align: center;">
+								Контент<br>Центральное поле
+							</p>
+								Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент
+							</div>
+								<div style="clear: both;
+									background-color: rgb(235, 80, 255); 
+									text-align: center; 
+									padding: 20px;">
+									Подвал<br>Материалы для сайта предоставили...
+								</div>
+					</div>				
+			</div>						
+		</div><br>		
+	<hr>
+
+	<!--<div style="background: url('img/1.jpg');
+	background-position: left bottom;
+	background-repeat: no-repeat;">
+<div style="background-image: url('img/wall_g200.png');
+		background-position: right top;
+		background-repeat: repeat-y;">
+	<div style="width: 15%; float: left">меню меню меню меню меню меню меню меню меню меню меню меню</div>
+		<div style="width: 200px; float: right"> банеры банеры банеры банеры банеры банеры банеры банеры банеры банеры</div>
+			<div style="margin-left: 17%; margin-right: 210px;">Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент</div>
+				<div style="clear: both;"></div>
+</div>
+</div>
+<br><hr>
+
+<div style="background: url('img/wall_y15%.png');
+	background-position: 15% top;
+	background-repeat: repeat-y;">
+<div style="background-image: url('img/wall_g200.png');
+		background-position: right top;
+		background-repeat: repeat-y;">
+	<div style="width: 15%; float: left">меню меню меню меню меню меню меню меню меню меню меню меню</div>
+		<div style="width: 200px; float: right"> банеры банеры банеры банеры банеры банеры банеры банеры банеры банеры банеры банеры банеры банеры банеры банеры банеры банеры ббанеры банеры банеры банеры банеры банеры банеры банеры банеры анеры</div>
+			<div style="margin-left: 17%; margin-right: 210px;">Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент</div>
+				<div style="clear: both;"></div>
+</div>
+</div>-->
+
+
+<div style="text-align: center; 
+		padding: 20px; 
+		margin-top: 100px;
+		background-color: yellow">
+		ЧЕРЕПАШКИ ЛУЧШИЙ САЙТ ИНТЕРНЕТА!
+</div>
+	<div style="background: url('img/left_img_15%.png') 15% top repeat-y;">
+		<div style="background: url('img/right_img_200px.png') right top repeat-y;">
+			<div style="box-sizing: border-box; width: 15%; background-color: transparent; padding: 10px; float: left">Главная<br>Меню<br>Левое поле
+			</div>
+				<div style="box-sizing: border-box; width: 200px; background-color: transparent; padding: 10px; float: right">Банеры<br>Реклама<br>Правое поле
+				</div>
+				
+					<div style="box-sizing: border-box; margin-left: 15%; margin-right: 200px; background-color: transparent; padding: 10px;text-align: justify;">
+						<!--<div style="background-image: url('img/ball.gif') right top repeat-y;"></div>-->
+						<p style="text-align: center;">Контент<br>Центральное поле
+						</p>
+						Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент Контент
+						</div>
+					</div>
+						<div style="clear: both; background-color: coral; text-align: center; padding: 20px;">Подвал<br>Материалы для сайта предоставили...
+						</div>
+			</div>		
+	</div><br>				
+				
+<hr>
+
+
+
+<div style="text-align: center; padding: 20px; background-color: rgba(255, 196, 0, 0.767); margin-top: 100px;">САЙТ ИНТЕРНЕТА!
+</div>
+	<div style="border: solid 2px transparent; 
+			background: url('img/3.jpg') left bottom no-repeat;">
+		<div style="border: solid 1px transparent; 
+			width: 15%; 
+			float: left;
+			padding: 15px;">left left left left left left leftleft left left left left left leftleft left left left left left leftleft left left left left left left
+			<img src="img/3.jpg" style="width: 100px; float: right; margin: 10px;"> left left left left left left leftleft left left left left left leftleft left left left left left leftleft left left left left left left
+		</div>
+			<div style="border: sollid 1px transparent; 
+				float: right; 
+				width: 200px; 
+				padding: 15px;">right right right right right right right right right right right right right right right right right right right right
+				<img src="img/3.jpg" style="width: 100px; float: left;"> right right right right right right right right right right right right right right right right right right right right
+			</div>
+					<div style="border: solid 1px transparent; 
+						margin-left: 15%; 
+						margin-right: 200px; 
+						padding: 15px;">
+						<p style="text-align: center;">покупайте<br>дельфиниум<br>только у нас!<br></p>
+							<img src="img/3.jpg" style="float: left; 
+								clear: both; 
+								width: 150px">
+							Своё научное латинское название растение получило, возможно, из-за сходства цветка с формой головы и тела дельфина. По другой версии, имя растения происходит от названия греческого города Дельфы.	Своё научное латинское название растение получило, возможно, из-за сходства цветка с формой головы и тела дельфина.
+							Своё научное латинское название растение получило, возможно, из-за сходства цветка с формой головы и тела дельфина.
+					</div>
+				<!--Можно без "подвала"  <div style="clear: both;"></div>-->
+		<div style="clear: both; background-color: rgba(89, 241, 28, 0.788); text-align: center; padding: 20px;">Подвал<br>Материалы для сайта предоставили...
+		</div>
+</div>
+
+</body>
+</html>

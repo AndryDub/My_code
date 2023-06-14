@@ -1,0 +1,38 @@
+@media all and (max-width: 720px) {
+	container {
+		width: 720px;
+	}
+
+	.article_title{
+		float: none;
+	}
+	
+	.article{
+		margin-left: 0px;
+	}
+	
+	.it{
+		float: none;
+	}
+	
+	.select{
+		margin-left: 0px;
+	}
+	
+	.publication{
+		float: none;
+	}
+	
+	.radio div{
+		display: block;
+		margin-left: 0px;
+	}
+
+	.radio{
+		margin-left: 0px;
+	}
+
+	.checkbox {
+		margin-left: 0px;
+	}
+}

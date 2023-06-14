@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Mexcellent 3D';
+    src: url('Mexcellent3D-Regular.eot');
+    src: url('Mexcellent3D-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Mexcellent3D-Regular.woff2') format('woff2'),
+        url('Mexcellent3D-Regular.woff') format('woff'),
+        url('Mexcellent3D-Regular.ttf') format('truetype'),
+        url('Mexcellent3D-Regular.svg#Mexcellent3D-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

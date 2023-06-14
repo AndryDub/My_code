@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+	p{
+		font-size: 18px;
+		line-height: 140%;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		text-indent: 25px;
+	}
+	h3{
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+		line-height: 140%;
+	}
+	ul{
+		list-style-type: decimal;
+		font-size: 18px;
+		line-height: 160%;
+		font-family: Verdana, Geneva, Tahoma, sans-serif;
+	}
+	</style>
+
+	<title>FONT</title>
+
+</head>
+<body>
+	<h1 style="text-align: center;
+				font-family: cursive;
+				color: #24977e;">
+				Анализ цвета в HTML-документах
+	</h1>
+<p>
+	Суть заключается в том, что браузеры очень гибко интерпретирует шестнадцатеричные значения RGB при кодировании цвета HTML-документов в устаревшем теге &lt;<strong>FONT</strong>&gt;.
+</p>
+<p>Первое что хотелось бы отметить, что в качестве алфавита шестнадцатеричной системы счисления используются цифры от 0 до 9 и шесть первых латинских букв – A, B, C, D, E, F. При переводе в десятичную систему буквы заменяются числами 10, 11, 12, 13, 14, 15 соответственно. В связи с этим, все пропущенные цифры или буквы не входящие в алфавит шестнадцатиричной системы счисления - обрабатываются как 0[...]. Неправильная цифра или буква просто интерпретируется как 0. Например, значения #F0F0F0, F0F0F0, F0F0F, #FxFxFx и FxFxFx одинаковы.
+</p>
+
+<p style="font-size:x-large;
+		text-align: center;">
+	Алгоритм синтаксического анализа цвета ведет себя следующим образом, чтобы получить 6-значное шестнадцатеричное значение из любой строки следует:
+</p>
+<h3>1. Сначала удалите все решётки, затем замените все нешестнадцатеричные символы (0-9, a-f) на 0.
+</h3>
+<p>
+	<strong>Например:</strong> #zqbttv становится <spam style="background: #00b000;">&laquo;00b000&raquo;</spam>
+</p>
+<h3>2. Для длин 1-2 правая закладка до 3 символов с нулями.
+</h3>
+<p>
+<strong>Например:</strong> «0F» становится <spam style="background: #0F0;">&laquo;0F0&raquo;</spam>, «F» становится <spam style="background: #F00;">&laquo;F00&raquo;</spam>.
+</p>
+<h3>3. Для длины 3 возьмите каждую цифру как значение красного, зеленого или синего и добавьте 0 к этому значению.
+</h3>
+<p>
+<strong>Например:</strong> «0F0» становится RGB (0, F, 0), который становится RGB (00, 0F, 00) или <spam style="background: #000F00; color: #FFF;">&laquo;000F00&raquo;</spam>.
+</p>
+<p>
+В этот момент выполняется любое значение короче 4 цифр.
+</p>
+<h3>4. Для длины 4 и более поле дополняется справа нулями до следующего полного числа, кратного 3. Этот шаг важен для более длинных полей.
+</h3>
+<p>
+<strong>Например:</strong> «0F0F» становится «0F0F00», «0F0F0F0» становится «0F0F0F000», а «00FF00FF00FF00FF» становится «00FF00FF00FF00FF00».
+</p>
+<p>
+Затем строка разбивается на три четные части, представляющие <spam style="background: #fF0000; color: #FFF;">&laquo;красный&raquo;</spam>, <spam style="background: #00FF00; color: #FFF;">&laquo;зеленый&raquo;</spam> и <spam style="background: #0000FF; color: #FFF;">&laquo;синий&raquo;</spam> цвета, слева направо.
+</p>
+<p>
+«0F0F00» ведет себя так, как ожидалось, становясь RGB (0F, 0F, 00). На этом этапе выполняется любая строка из 6 символов <spam style="background: #0F0F00; color: #FFF;">&laquo;0F0F00&raquo;</spam>.
+</p><br>
+<div style="border: solid 3px #24977e; padding: 10px;">
+	<img src="img/Candy.png" 
+			style="float: right;
+			width: 350px;
+			margin: 15px 5px 5px 10px">
+		<!--<div style="border: solid 1px transparent; margin-right: 600px; float: left;">-->
+		<div style="border: solid 1px transparent; margin-right: 400px; padding: 20px;">
+			<strong>
+			<p> Опишем на нашем примере, <spam style="background: #fff; color: #bc0d00;">&lt;font color=""#CANDY""&gt;...&lt;/font&gt;</spam></p>
+			<p>Заменяем все неправильные шестнадцатеричные символы нулями, CANDY и представляем собой значение из 5-ти символов &laquo;CA0D0&raquo;.</p>
+			<p>Дополняем поле нулём справа, чтобы получить полное число кратное 3, которое становиться <spam style="white-space: nowrap">RGB (CA, 0D, 00)</spam> и браузер отобразит текст в цвете <spam style="background: #ca0d00; color: #FFF;">&laquo;#ca0d00&raquo;</spam>
+			</p>
+			</strong>
+			<div style="clear: both"></div>
+	</div>
+</div>
+<h3>5. Более длинные строки, такие как "1234567890ABCDE", становятся <em>RGB(12345, 67890, ABCDE)</em>. Точно так же разбиваются очень длинные строки. «1234567890ABCDE1234567890ABCDE» становится <em>RGB(1234567890, ABCDE12345, 67890ABCDE)</em>.
+</h3>
+<p>
+В этот момент значения RGB усекаются по отдельности.
+</p>
+<h3>6. Если отдельные значения RGB имеют длину более 8 символов, они усекаются до 8 символов путем удаления символов слева. Это, в частности, было неожиданно
+</h3>
+<p>
+RGB(1234567890, ABCDE12345, 67890ABCDE) становится RGB(34567890, CDE12345, 890ABCDE) и так далее.
+</p>
+<h3>7. Как только отдельные значения RGB имеют длину менее 8 символов, они усекаются путем удаления символов справа.
+</h3>
+<p>
+RGB(34567890, CDE12345, 890ABCDE) становится RGB(34, CD, 89) или <spam style="background: #34CD89; color: #FFF;">#34CD89</spam> в более традиционной записи.
+</p><br>
+<div style="border: solid 3px #24977e; padding: 10px;">
+	<img src="img/BruceWillis.jpg" 
+			style="float: right;
+			width: 350px;
+			margin: 15px 5px 5px 10px">
+		<!--<div style="border: solid 1px transparent; margin-right: 600px; float: left;">-->
+		<div style="border: solid 1px transparent; margin-right: 450px; padding: 20px;">
+			<strong>
+			<p>
+			Опишем на нашем примере, <spam style="background: #fff; color: #b0e000;">&lt;font color=""#BruceWillis""&gt;...&lt;/font&gt;</spam></p>
+			<p>
+			Заменяем все неправильные шестнадцатеричные символы нулями, BruceWillis и представляем собой значение из 11-ти символов &laquo;B00CE000000&raquo;.</p>
+			<p>
+			Дополняем поле нулём справа, чтобы получить полное число кратное 3, которое становиться <spam style="white-space: nowrap">RGB (B00C, E000, 0000)</spam>.</p>
+			<p>
+			Обрезаем каждый из аргументов справа, оставляя 2 символа, и получаем наш результат <spam style="white-space: nowrap">RGB (B0, E0, 00)</spam>, который отобразиться в браузере, текстом, в цвете <spam style="background: #b0e000; color: #FFF;">&laquo;b0e000&raquo;</spam>.</p>
+			</strong>
+			<div style="clear: both"></div>
+	</div>
+</div>
+<p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 22px;">
+	<strong>
+	Любая строка должна быть преобразована в 6-значный шестнадцатеричный цвет с помощью описанных выше шагов.
+	</strong>
+</p>
+<p>
+<strong><em>И еще один пример</em></strong>, <spam style="background: #ffffff; color: #6ecde0;">&laquo;font color="6db6ec49efd278cd0bc92d1e5e072d68"&raquo;</spam> (да, это случайные шестнадцатеричные данные) приведет к тому, что браузер отобразит текст в цвете <spam style="background: #6ecde0; color: #FFF;">&laquo;6ecde0&raquo;</spam>, довольно приятном голубом. Усечение до <spam style="background: #6db6ec; color: #FFF;">&laquo;6db6ec&raquo;</spam>, как мы могли ожидать, или до <spam style="background: #072d68; color: #FFF;">&laquo;072d68&raquo;</spam>, (тоже бледно-голубой, по совпадению). Однако, если внимательно посмотрите внутри случайной шестнадцатеричной строки, компоненты, составляющие окончательное значение RGB, присутствуют в последовательном порядке: «6db <spam style="background: #ffffff; color: #F00;">6e</spam> c49efd278 <spam style="background: #ffffff; color: #0F0;">cd</spam> 0bc92d1e5 <spam style="background: #ffffff; color: #00F;">e0</spam> 72d68» .
+</p>
+<ul>
+	<li>Чтобы продолжить декодирование этого значения, его сначала нужно дополнить нулём справа:
+		6db <spam style="background: #ffffff; color: #F00;">6e</spam> c49efd278 <spam style="background: #ffffff; color: #0F0;">cd</spam> 0bc92d1e5 <spam style="background: #ffffff; color: #00F;">e0</spam> 72d680</li>
+	<li>Затем разделить на три четные части:
+RGB( 6db <spam style="background: #ffffff; color: #F00;">6e</spam> c49efd, 278 <spam style="background: #ffffff; color: #0F0;">cd</spam> 0bc92d, 1e5 <spam style="background: #ffffff; color: #00F;">e0</spam> 72d680)</li>
+	<li>Затем эти части обрезаются слева до 8 цифры:
+RGB( <spam style="background: #ffffff; color: #F00;">6e</spam> c49efd, <spam style="background: #ffffff; color: #0F0;">cd</spam> 0bc92d, <spam style="background: #ffffff; color: #00F;">e0</spam> 72d680)</li>
+	<li>Затем обрезается справа до двух старших значащих цифр:
+RGB( <spam style="background: #ffffff; color: #F00;">6e</spam> , <spam style="background: #ffffff; color: #0F0;">cd</spam> , <spam style="background: #ffffff; color: #00F;">e0</spam> )</li>
+</ul>
+
+<p>И у вас есть тот же цвет, который будет отображаться в браузере, если вы введете 6db6ec49efd278cd0bc92d1e5e072d68.
+</p>
+
+</body>
+</html>

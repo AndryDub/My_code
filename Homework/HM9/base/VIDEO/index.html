@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Video</title>
+
+</head>
+
+<body>
+	<!-- <video controls width="400" height="400"
+       autoplay loop muted
+       poster="poster.png">
+  <source src="https://www.youtube.com/embed/Lli99OmkPwM" type="video/mp4">
+  <source src="https://www.youtube.com/embed/Lli99OmkPwM" type="video/webm">
+  <p>Your browser doesn't support HTML5 video. Here is a <a href="rabbit320.mp4">link to the video</a> instead.</p>
+</video> -->
+
+
+
+	<div class="wrap">
+
+		<!-- <iframe controls width="560" height="315" src="https://www.youtube.com/embed/O24AipZ-buQ"
+			title="YouTube video player" frameborder="0"
+			allow="autoplay; encrypted-media" allowfullscreen></iframe> 
+		Не подгружвется изображение при статическом состоянии видео-->
+
+		<iframe controls width="560" height="315" src="https://www.youtube.com/embed/Lli99OmkPwM"
+			title="YouTube video player" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen></iframe>
+		<p><a href="https://www.youtube.com/embed/Lli99OmkPwM" target="_blank">смотреть в отдельном окне</a></p><br>
+
+		<iframe controls width="550" height="350" src="https://www.youtube.com/embed/8FMpIiDo-Ic"
+			title="YouTube video player" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen></iframe>
+		<p><a href="https://www.youtube.com/embed/8FMpIiDo-Ic" target="_blank">смотреть в отдельном окне</a></p><br>
+
+		<iframe controls width="550" height="350" src="https://www.youtube.com/embed/0-C0lCPFTj8"
+			title="YouTube video player" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen></iframe>
+		<p><a href="https://www.youtube.com/embed/0-C0lCPFTj8" target="_blank">смотреть в отдельном окне</a></p><br>
+
+	</div>
+
+
+
+	<!-- Ленивая загрузка встроенных видео
+Если вы планируете добавит несколько видео на страницу, то можете столкнуться со значительным увеличением времени загрузки. Пользователь может быть даже не запустит плеер, а уже скачает лишние ресурсы.
+
+Чтобы решить ту проблему мы будем использовать вместо плеера крошечную встраиваемую страницу с превью видео и кнопкой. А при нажатии на нее будет загружаться плеер.
+
+Хитрость будет заключаться атрибуте iframe — srcdoc в который мы поместим HTML нашего превью. -->
+
+	<!-- <iframe
+	width="560"
+	height="315"
+	src="https://www.youtube.com/embed/li_9PBrcOcQ"
+	srcdoc="<style>*{padding:0;margin:0;overflow:hidden}
+	html,body{height:100%}
+	img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+	span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
+	</style>
+	<a href=https://www.youtube.com/embed/li_9PBrcOcQ?autoplay=1>
+	<img src=https://img.youtube.com/vi/li_9PBrcOcQ/hqdefault.jpg alt='Demo video'>
+	<span>▶</span>
+	</a>"
+	frameborder="0"
+	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+	allowfullscreen
+	title="Demo video">
+</iframe> -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+
+<style>
+
+	/* Присваивается всему документу - перед началом работы*/ 
+		*{
+			/*margin: 0;/* Нужно ли убирать margin: 0;- если присваиваем "flex-flow: wrap"???*/
+			padding: 0;
+			box-sizing: border-box;
+		}
+	
+		/* Это присвается к родительскому элементу*/
+		.parent{
+			display: flex;
+			background-color: cadetblue;
+			justify-content: space-between; /*- Выравнивание по горизонтали, (по центру, вначало, в конец, выравнивание по всей ширине страницы...)*/
+			/*align-items: center; /*- Выравнивает по вертикали в 3-х положениях (Flex-start-вверху; Flex-end-внизу; Center) -*Задаётся для вего родительского элемента*- -(обязательно добавить высоту для родительского элемента)-*/
+			/*height: 100px; /*- Высота для родителя*/
+			/*flex-direction: row-reverse; /*Произойдёт реверс всех колонок*/
+			/*flex-direction: column; /*- Растянутся на весь экран и выравняются один за одним по вертикали*/
+			flex-flow: wrap; /*- Присваиваем когда очень много элементов вложено в дочерний элемент */
+		}
+	
+		.parent > div{
+			height: 30px;
+			flex-basis: 200px; /*- Задаём ширину (для горизонтальной стоки) или высоту (для вертикальных строк)*/
+			margin-bottom: 20px;
+		}
+		
+		/*Это дочерние элементы*/
+		.parent > div:nth-child(even){ /*- Чётные элементы - even*/
+			background-color: red;
+			/*order: 4; /*- Меняется местами с "nth-child(1)" 1-го места на "order: 4;" 4-е место*/
+			/*align-self: flex-end; /*- Выравнивает по вертикали в 3-х положениях (Flex-start-вверху; Flex-end-внизу; Center) -*Задаётся для каждого отдельного дочернего элемента*-*/
+		}
+	
+		.parent > div:nth-child(odd){/*- Нечетные элементы - odd*/
+			background-color: green;
+			/*flex-shrink: 5; /*- Увеличивает скорость сжатия колонки при сужении страницы*/
+			/*flex-grow: 3; /*- Увеличивает колонку (flex-grow: 3; в 3-и раза) по отношению к базовому размеру 200px (200px*3=600px)*/
+			/*order: 3; /*- Меняется местами с "nth-child(2)" 2-го места на "order: 3;" 3-е место*/
+			/*align-self: flex-start; /*- Выравнивает по вертикали в 3-х положениях (Flex-start-вверху; Flex-end-внизу; Center) -*Задаётся для каждого отдельного дочернего элемента*-*/
+		}
+	
+	</style>
+
+<title>Flex2</title>
+	
+	</head>
+	<body>
+
+		<div class="parent">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
+
+	</html>

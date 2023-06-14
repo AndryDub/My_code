@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Armata&display=swap" rel="stylesheet">
+
+	<style>
+		/*<code class="inline-code code-fix font-theme font-theme--code">&lt;area&gt;</code>  -  не прописывается сод в кавычках*/
+
+		body {
+			width: 100%;
+			font-size: 20px;
+			line-height: 30px;
+			font-family: 'Armata', sans-serif;
+			color: #f1e4e4;
+			background: rgb(31, 30, 30);
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		.map-container {
+			border: 3px solid #fff;
+			margin: 0 auto;
+			width: 100%;
+			padding-top: 76px;
+			display: inline-block;
+			border-bottom: 1px solid transparent;
+			text-align: center;
+		}
+
+		figure {
+			object-fit: cover;
+			width: fit-content;
+			float: left;
+			/* margin: 0 0 0 3.5%; */
+			background: #272525;
+			border-radius: 10px;
+			padding: 2%;
+			/* object-fit: cover; */
+		}
+		
+/* !!!работа с jbject-fit для картинок!!! */
+		/* figure {
+ width: 100%; Ширина области */
+ /* height: 400px; Высота области */
+ /* margin: 0; Обнуляем отступы */
+
+/* figure img { 
+ width: 100%; Ширина изображений */
+ /* height: 100%; Высота изображении */
+ /* object-fit: cover; Вписываем фотографию в область */
+/* !!!   !!! */
+
+
+
+		/*.wrapper{
+	position: relative;
+	padding-top: 56.25%; /*16:9 Aspect Ratio*/
+
+		/*img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
+}*/
+
+		/*.responsive{
+	width: 100%;
+	/*max-width: 100%*/
+		/* - Если требуется, чтобы изображение было масштабировано, но никогда не масштабируется до размера, превышающего его исходный размер - */
+		/*max-width: 400px;*/
+		/* - если требуется ограничить адаптивный образ максимальным размером - */
+		/*height: auto;
+	object-fit: cover;
+}*/
+	</style>
+
+	<title>Area</title>
+
+</head>
+
+<body>
+
+	<div>
+		<div style="background: rgb(231, 129, 13);
+		padding: 20px;">
+			<h1>
+				&lt;area&gt;
+			</h1>
+			<p>
+				Размечает картинку невидимыми областями.
+			</p>
+		</div>
+
+		<div style=" width: 300px; float: left;  margin-top: 20px;">
+			<ul style="list-style-type: none; font-size: medium; color: #fff;">
+				<li><a style="color: #fff;" href="#кратко">Кратко</a></li>
+				<li><a style="color: #fff;" href="#пример">Пример</a></li>
+				<li><a style="color: #fff;" href="#как пишется">Как пишется</a></li>
+				<li><a style="color: #fff;" href="#как понять">Как понять</a></li>
+				<li><a style="color: #fff;" href="#подсказки">Подсказки</a></li>
+			</ul>
+		</div>
+
+		<div style="width: 200px; float: right;">
+		</div>
+
+		<div style="margin-left: 300px;
+	margin-right: 200px;
+	max-width: auto;">
+			<p>
+				<a name="кратко"></a>
+			</p>
+			<div>
+				<h2>Кратко</h2>
+				<p>С помощью тега
+					<span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">&lt;area&gt;</span>
+					можно сделать красивую навигацию, разметив обычную картинку областями и указав для них ссылки.
+				</p>
+				<div style="border-radius: 10px; background: rgb(70, 71, 71); padding: 25px; width: fit-content">
+					<span
+						style="border-radius: 10px; display: unset; background: rgb(31, 30, 30); padding: 0 10px;">&lt;area&gt;</span>
+					не знает как жить без тега-контейнера
+					<span
+						style="border-radius: 10px; display: unset; background: rgb(31, 30, 30); padding: 0 10px;">&lt;map&gt;</span>
+					😥
+				</div>
+			</div><br>
+
+			<p>
+				<a name="пример"></a>
+			</p>
+			<h2>Пример</h2>
+			<p>Элементарная навигация по курсу "Разработка web-сайтов с использованием HTML, CSS и JavaScript":
+			</p>
+
+			<p style="border-radius: 10px; display: unset; font-size: small; background: rgb(70, 71, 71); padding: 0 5px;">
+				HTML
+			</p>
+
+			<div style="background-color: black; padding: 0 20px;">
+				<pre style="display: block; margin-top: 0; margin-bottom: 5px; overflow: auto; font-size: 18px;">
+		<code >
+1 &lt;map name="webmap"&gt;
+2   &lt;area target="_blank" alt="HTML" title="HTML"
+3   href="https://www.w3schools.com/html/" coords="48,4,319,66" shape="rect"&gt;
+4   &lt;area target="_blank" alt="CSS" title="CSS"
+5   href="https://www.w3schools.com/css/" coords="48,68,318,128" shape="rect"&gt;
+6   &lt;area target="_blank" alt="JS" title="JS"
+7   href="https://www.w3schools.com/js/" coords="48,132,318,192" shape="rect"&gt;
+8 &lt;/map&gt;
+9 &lt;img src="img/HTML_CSS_JS.png" alt="Web" usemap="#webmap"&gt;
+		</code>
+	</pre>
+			</div><br>
+
+			<div style="background-position: center;">
+				<map name="webmap">
+					<area target="_blank" alt="HTML" title="HTML" href="https://www.w3schools.com/html/" coords="48,4,319,66"
+						shape="rect">
+					<area target="_blank" alt="CSS" title="CSS" href="https://www.w3schools.com/css/" coords="48,68,318,128"
+						shape="rect">
+					<area target="_blank" alt="JS" title="JS" href="https://www.w3schools.com/js/" coords="48,132,318,192"
+						shape="rect">
+				</map><br>
+				<img style="display: block; margin: 0 auto" src="img/HTML_CSS_JS.png" alt="Web"
+					usemap="#webmap"><br>
+			</div>
+
+			<p>
+				<a name="как пишется">
+				</a>
+			</p>
+			<h2>Как пишется
+			</h2>
+			<p>Тег
+				<span
+					style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">&lt;area&gt;</span>
+				помещаем внутрь
+				<span
+					style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">&lt;map&gt;</span>
+				и прописываем два обязательных атрибута:
+			</p>
+			<ul style="list-style-type:square">
+				<li><span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">shape</span>
+					определяет форму области. Можно указать
+					<span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">circle</span>
+					для круга,
+					<span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">poly</span>
+					для произвольной формы или
+					<span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">rect</span>
+					для прямоугольника (он же форма
+					<span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">&lt;area&gt;</span>
+					по умолчанию);
+				</li>
+				<li><span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">coords</span>
+					задаёт координаты области. Для круга проще всего:
+					<span style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">x, y,
+						R</span>,
+					где
+					<span style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">R</span>
+					— радиус круга, для прямоугольника формат
+					<span style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">x1, y1,
+						x2, y2</span>,
+					а для произвольной формы
+					<span style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">x1, y1,
+						x2, y2, ... , xn, yn</span>.
+					Поскольку у произвольной формы может быть много точек, будьте готовы к длинному коду 💀
+				</li>
+			</ul>
+
+			<p>Но пока что область «мёртвая», то есть её нельзя выбрать. Чтобы исправить это, добавим следующие атрибуты:
+			</p>
+			<ul style="line-height: 35px;">
+				<li><span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">href</span>
+					для адреса ссылки;
+				</li>
+				<li><span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">target</span>
+					для способа эту ссылку открыть;
+				</li>
+				<li><span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">alt</span>
+					для альтернативной подписи.
+				</li>
+			</ul>
+
+			<p>А ещё можно указать:
+			</p>
+			<ul>
+				<li><span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">download</span>
+					для скачивания файла по ссылке;
+				</li>
+				<li><span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">ping</span>
+					для перечисления URL-адресов ресурсов, которым нужно уведомление о переходе пользователя по гиперссылке;
+				</li>
+				<li><span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">rel</span>
+					для выбора типа ссылки;
+				</li>
+				<li><span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">referrerpolicy</span>
+					определяет, как JavaScript функция
+					<span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">fetch</span>
+					устанавливает HTTP-заголовок
+					<span
+						style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">Referer</span>
+					🤖
+				</li>
+			</ul><br>
+
+			<div style="border-radius: 10px; background: rgb(70, 71, 71); padding: 25px; width: fit-content;">
+				Если атрибут
+				<span style="border-radius: 10px; display: unset; background: rgb(31, 30, 30); padding: 0 10px;">href</span>
+				отсутствует, то все остальные атрибуты, кроме
+				<span
+					style="border-radius: 10px; display: unset; background: rgb(31, 30, 30); padding: 0 10px;">shape</span>
+				и
+				<span
+					style="border-radius: 10px; display: inline; background: rgb(31, 30, 30); padding: 0 10px;">coords</span>,
+				должны быть опущены.
+			</div><br>
+
+			<p>
+				<a name="как понять"></a>
+			</p>
+			<h2>Как понять</h2>
+			<p>Тег
+				<span
+					style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">&lt;area&gt;</span>
+				создаёт на картинке невидимую область по координатам, а потом присваивает ей ссылку. Жмём на область —
+				переходим по ссылке.
+			</p>
+
+			<p>
+				<a name="подсказки"></a>
+			</p>
+			<h2>Подсказки
+			</h2>
+			<p>💡 Самые ёмкие в записи формы
+				<span
+					style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">&lt;area&gt;</span>
+				— прямоугольник и круг, поскольку они требуют меньше всего координат. Если вам плохо от огромного кода,
+				лучше отказаться от произвольных областей.
+			</p>
+			<p>💡 Не стоит загружать в фотошоп картинку и выискивать каждую точку координат. В интернете полно бесплатных
+				ресурсов, где можно загрузить изображение и просто кликать мышью по точкам, а программа выдаст готовый код!
+				Искать можно так: «генератор координат HTML».
+			</p>
+			<p>💡 С помощью
+				<span
+					style="border-radius: 10px; display: unset; background: rgb(70, 71, 71); padding: 0 5px;">&lt;area&gt;</span>
+				можно разметить на картинке отдельные предметы и сделать целый каталог:
+			</p>
+			<p><strong>Для создания координат активной области, я использовал бесплатный онлайн-генератор карт
+					изображений:</strong><br>
+				<a target="_blank" alt="Бесплатный онлайн-генератор карт и изображений" href="https://www.image-map.net/"
+					style="color: #e24e4e">www.image-map.net/</a>
+			</p>
+
+			<div>
+				<p
+					style="border-radius: 10px; display: unset; font-size: small; background: rgb(70, 71, 71); padding: 0 5px;">
+					HTML
+				</p>
+				<div style="background-color: black; padding: 0 20px;">
+					<pre style="display: block; margin-top: 0; margin-bottom: 5px; overflow: auto; font-size: 18px;">
+				<code >
+1  &lt;map name="planetsmap"&gt;
+2    &lt;area target="_blank" alt="Солнце" title="img_Солнце"
+3    href="https://ru.wikipedia.org/wiki/Солнце" coords="4,559,1,1,35,0,60,20,85,47,107,78,124,112,142,154,155,188,162,226,162,264,161,302,156,341,147,370,138,408,117,442,95,475,72,501,41,527" shape="poly"&gt;
+4    &lt;area target="_blank" alt="Меркурий" title="Меркурий"
+5    href="https://ru.wikipedia.org/wiki/Меркурий" coords="194,323,13" shape="circle"&gt;
+6    &lt;area target="_blank" alt="Венера" title="Венера"
+7    href="https://ru.wikipedia.org/wiki/Венера" coords="265,291,20" shape="circle"&gt;
+8    &lt;area target="_blank" alt="Земля" title="Земля"
+9    href="https://ru.wikipedia.org/wiki/Земля" coords="338,251,21" shape="circle"&gt;
+10   &lt;area target="_blank" alt="Марс" title="Марс"
+11   href="https://ru.wikipedia.org/wiki/Марс" coords="390,203,16" shape="circle"&gt;
+12   &lt;area target="_blank" alt="Юпитер" title="Юпитер"
+13   href="https://ru.wikipedia.org/wiki/Юпитер" coords="519,221,49" shape="circle"&gt;
+14   &lt;area target="_blank" alt="Сатурн" title="Сатурн"
+15   href="https://ru.wikipedia.org/wiki/Сатурн" coords="615,132,596,127,577,120,562,120,560,129,573,138,588,148,606,156,608,170,615,182,627,192,645,199,659,197,671,193,678,185,693,191,710,195,727,195,737,194,727,182,706,171,687,162,680,146,667,128,640,120,630,128" shape="poly"&gt;
+16   &lt;area target="_blank" alt="Уран" title="Уран"
+17   href="https://ru.wikipedia.org/wiki/Уран_(планета)" coords="758,133,750,141,745,150,734,150,730,139,730,126,723,114,720,102,724,91,732,82,741,78,748,70,758,60,763,65,767,75,768,86,771,94,775,99,775,113,772,119,767,126" shape="poly"&gt;
+18   &lt;area target="_blank" alt="Нептун" title="Нептун"
+19   href="https://ru.wikipedia.org/wiki/Нептун" coords="832,60,28" shape="circle"&gt;
+20   &lt;area target="_blank" alt="Плутон" title="Плутон"
+21   href="https://ru.wikipedia.org/wiki/Плутон" coords="893,20,10" shape="circle"&gt;
+22 &lt;/map&gt;
+23 &lt;img src="img/sun_sistem2.jpg" alt="Кликабельная картинка солнечной системой" usemap="#planetsmap"&gt;
+		</code>
+	</pre>
+				</div><br>
+
+				<p style="text-align: center;">Нажмите на одну из планет, чтобы узнать о ней больше:
+				</p>
+				<div class="map-container">
+					<map name="planetsmap">
+						<area target="_blank" alt="Солнце" title="Солнце" href="https://ru.wikipedia.org/wiki/Солнце"
+							coords="4,559,1,1,35,0,60,20,85,47,107,78,124,112,142,154,155,188,162,226,162,264,161,302,156,341,147,370,138,408,117,442,95,475,72,501,41,527"
+							shape="poly">
+						<area target="_blank" alt="Меркурий" title="Меркурий" href="https://ru.wikipedia.org/wiki/Меркурий"
+							coords="194,323,13" shape="circle">
+						<area target="_blank" alt="Венера" title="Венера" href="https://ru.wikipedia.org/wiki/Венера"
+							coords="265,291,20" shape="circle">
+						<area target="_blank" alt="Земля" title="Земля" href="https://ru.wikipedia.org/wiki/Земля"
+							coords="338,251,21" shape="circle">
+						<area target="_blank" alt="Марс" title="Марс" href="https://ru.wikipedia.org/wiki/Марс"
+							coords="390,203,16" shape="circle">
+						<area target="_blank" alt="Юпитер" title="Юпитер" href="https://ru.wikipedia.org/wiki/Юпитер"
+							coords="519,221,49" shape="circle">
+						<area target="_blank" alt="Сатурн" title="Сатурн" href="https://ru.wikipedia.org/wiki/Сатурн"
+							coords="615,132,596,127,577,120,562,120,560,129,573,138,588,148,606,156,608,170,615,182,627,192,645,199,659,197,671,193,678,185,693,191,710,195,727,195,737,194,727,182,706,171,687,162,680,146,667,128,640,120,630,128"
+							shape="poly">
+						<area target="_blank" alt="Уран" title="Уран" href="https://ru.wikipedia.org/wiki/Уран_(планета)"
+							coords="758,133,750,141,745,150,734,150,730,139,730,126,723,114,720,102,724,91,732,82,741,78,748,70,758,60,763,65,767,75,768,86,771,94,775,99,775,113,772,119,767,126"
+							shape="poly">
+						<area target="_blank" alt="Нептун" title="Нептун" href="https://ru.wikipedia.org/wiki/Нептун"
+							coords="832,60,28" shape="circle">
+						<area target="_blank" alt="Плутон" title="Плутон" href="https://ru.wikipedia.org/wiki/Плутон"
+							coords="893,20,10" shape="circle">
+					</map>
+					<figure>
+						<img src="img/sun_sistem2 1000-640.png" alt="Кликабельная картинка солнечной системой"
+							class="responsive" usemap="#planetsmap">
+						<figcaption>
+							С изображением конечно получился - косяк)))<br>
+							Несколько раз переделывал и заново отбивал все точки через онлайн-генератор, но так и не понял,как
+							всё-таки сделать изображение, которое будет адаптивным (резиновым) и в нём не будут сбиваться, в
+							зависимости от разрешения изображения, связанные с ним координаты областей.
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div>
+
+</body>
+
+</html>

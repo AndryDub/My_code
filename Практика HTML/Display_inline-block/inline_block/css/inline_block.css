@@ -1,0 +1,52 @@
+.conteiner{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	}
+
+.one{
+	background: red;
+	width: 200px;
+	height: auto;
+	display: inline-block;
+}
+
+.two{
+	background: rgb(0, 255, 55);
+	width: 200px;
+	height: auto;
+	display: inline-block;
+	/* width: 100%; */
+	
+}
+
+.three{
+	background: rgb(200, 255, 0);
+	width: 200px;
+	height: auto;
+	display: inline-block;
+}
+
+.four{
+	background: rgb(0, 204, 255);
+	width: 200px;
+	height: auto;
+	display: inline-block;
+} 
+
+.five{
+	background: rgb(76, 0, 255);
+	width: 200px;
+	height: auto;
+	display: inline-block;
+}
+
+.six{
+	background: rgb(204, 0, 255);
+	width: 200px;
+	height: auto;
+	display: inline-block;
+}
+

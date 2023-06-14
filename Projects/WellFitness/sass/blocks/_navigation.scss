@@ -1,0 +1,558 @@
+.conteiner_navigation {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px 240px 0px 255px;
+	gap: 10px;
+	width: 1920px;
+	height: 44px;
+	background: #2a2c38;
+}
+.navigation_menu {
+	display: flex;
+	// flex-direction: row;
+	align-items: center;
+	align-items: center;
+	// gap: 19px;
+	width: 267px;
+	height: 44px;
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.navigation_menu > li {
+	// display: inline-flex;
+	// обводка для элементов li
+	// outline: 1px solid brown;
+}
+.navigation_menu > li + li {
+	margin-left: 20px;
+}
+// Линия проходящая под вкладками списка меню
+.navigation_menu > li > a {
+	padding: 0 0 15px 0;
+	position: relative;
+	// text-transform: uppercase;
+	font-family: "Inter", sans-serif;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	color: #fff;
+	text-align: center;
+}
+.navigation_menu > li > a:hover {
+	text-decoration: none;
+	color: #f53b49;
+}
+.navigation_menu > li > a:after {
+	width: 0;
+	height: 3px;
+	background-color: #f53b49;
+	content: "";
+	left: 0;
+	bottom: 10px;
+	position: absolute;
+	transition: all 0.3s;
+}
+.navigation_menu > li > a:hover::after {
+	width: 100%;
+}
+// .nav_menu > li.active a:after {
+// 	width: 100%;
+// }
+.navigation_menu li {
+	margin: 0;
+	white-space: nowrap;
+}
+.navigation_menu li.navigation-children {
+	position: relative;
+	margin-right: 12px;
+}
+// Указатель раскрывающегося меню
+.navigation_menu li.navigation-children:after {
+	position: absolute;
+	content: "\2039";
+	color: #f53b49;
+	font-size: 20px;
+	font-weight: bold;
+	right: -12px;
+	top: -2px;
+	transform: rotate(-90deg);
+}
+.navigation_menu li li.navigation-children:after {
+	position: absolute;
+	content: "\2039";
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	right: 10px;
+	top: 12px;
+	transform: rotate(180deg);
+}
+.navigation_menu li.navigation-children:hover > ul {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+.navigation_menu ul {
+	padding: 10px 0;
+	margin: 0;
+	list-style: none;
+	background-color: #f53b49;
+	position: absolute;
+	z-index: 1;
+	min-width: 220px;
+	top: 100%;
+	left: -30px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(5px);
+	transition: all 200ms cubic-bezier(0.43, 0.59, 0.16, 1.25);
+}
+.navigation_menu ul li {
+	display: block;
+	padding: 0 10px;
+	line-height: 1.1;
+}
+.navigation_menu ul li:last-child {
+	margin-bottom: 0;
+}
+// Раскрывающееся многоуровневое меню
+.navigation_menu ul li a {
+	display: block;
+	color: #fff;
+	padding: 7px;
+	transition: all 0.3s;
+	text-decoration: none;
+}
+.navigation_menu ul li a:hover {
+	color: #f53b49;
+	background: #fff;
+	text-decoration: none;
+}
+.navigation_menu ul ul {
+	top: 0;
+	left: 100%;
+}
+
+// !!! <!-- Navigation  вариант 1-->
+// .conteiner_navigation {
+// 	display: flex;
+// 	flex-direction: row;
+// 	align-items: flex-start;
+// 	padding: 0px 240px 0px 255px;
+// 	gap: 10px;
+// 	width: 1920px;
+// 	height: 44px;
+// 	background: #2a2c38;
+// 	.navigation_menu {
+// 		display: flex;
+// 		flex-direction: row;
+// 		align-items: center;
+// 		// gap: 19px;
+// 		width: 267px;
+// 		height: 44px;
+// 		border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+// 		// Основное (видимое) меню в Navigation
+// 		li {
+// 			// display: inline-flex;
+// 			flex-direction: column;
+// 			align-items: flex-start;
+// 			gap: 8px;
+// 			margin: 0;
+// 			white-space: nowrap;
+// 			& + li {
+// 				margin-left: 20px;
+// 			}
+// 			a {
+// 				padding: 0 0 15px 0;
+// 				position: relative;
+// 				// text-transform: uppercase;
+// 				color: #fff;
+// 				text-align: center;
+// 				font-family: "Inter", sans-serif;
+// 				font-weight: 700;
+// 				font-size: 14px;
+// 				line-height: 17px;
+// 				&:hover {
+// 					text-decoration: none;
+// 					color: #f53b49;
+// 				}
+// 				&::after {
+// 					width: 0;
+// 					height: 3px;
+// 					background-color: #f53b49;
+// 					content: "";
+// 					left: 0;
+// 					bottom: 10px;
+// 					position: absolute;
+// 					transition: all 0.3s;
+// 				}
+// 				&:hover::after {
+// 					width: 100%;
+// 				}
+// 			}
+// 		}
+
+// 		.navigation_children {
+// 			position: relative;
+// 			margin-right: 12px;
+// 			&::after {
+// 				position: absolute;
+// 				content: "\2039";
+// 				color: #f53b49;
+// 				font-size: 20px;
+// 				font-weight: bold;
+// 				right: -12px;
+// 				top: -2px;
+// 				transform: rotate(-90deg);
+// 			}
+// 			li &:after {
+// 				position: absolute;
+// 				content: "\25BE";
+// 				color: #fff;
+// 				font-size: 14px;
+// 				font-weight: bold;
+// 				right: 10px;
+// 				top: 12px;
+// 				transform: rotate(180deg);
+// 				ul {
+// 					opacity: 1;
+// 					visibility: visible;
+// 					transform: translateY(0);
+// 				}
+// 			}
+// 			ul {
+// 				padding: 10px 0;
+// 				margin: 0;
+// 				list-style: none;
+// 				background-color: #f53b49;
+// 				position: absolute;
+// 				z-index: 1;
+// 				min-width: 220px;
+// 				top: 100%;
+// 				left: -30px;
+// 				opacity: 0;
+// 				visibility: hidden;
+// 				transform: translateY(5px);
+// 				transition: all 200ms cubic-bezier(0.43, 0.59, 0.16, 1.25);
+// 				li {
+// 					display: block;
+// 					padding: 0 10px;
+// 					line-height: 1.1;
+// 					a {
+// 						display: block;
+// 						color: #fff;
+// 						padding: 7px;
+// 						transition: all 0.3s;
+// 						text-decoration: none;
+// 						&:hover {
+// 							color: #f53b49;
+// 							background: #fff;
+// 							text-decoration: none;
+// 						}
+// 					}
+// 					ul {
+// 						top: 0;
+// 						left: 100%;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+
+// .ogl ol li:before {
+// 	content: '\25BE';
+// 	color: #ff0000;
+// 	margin-left: -26px;
+// 	padding-right: 5px;
+// 	font-size: 22px;
+
+// !!! Вариант 2
+
+// .conteiner_navigation {
+// 	display: flex;
+// 	flex-direction: row;
+// 	justify-content: flex-start;
+// 	align-items: flex-start;
+// 	padding: 0px 240px 0px 255px;
+// 	gap: 10px;
+// 	width: 1920px;
+// 	height: 44px;
+// 	background: #2a2c38;
+// 	.navigation_menu {
+// 		display: flex;
+// 		justify-content: flex-start;
+// 		flex-direction: row;
+// 		align-items: center;
+// 		gap: 19px;
+// 		width: 1410px;
+// 		height: 44px;
+// 		border-right: 1px solid rgba(0, 0, 0, 0.2);
+
+// 		li {
+// 			// display: inline-flex;
+// 			flex-direction: column;
+// 			align-items: flex-start;
+// 			gap: 8px;
+// 			margin: 0;
+// 			white-space: nowrap;
+// 			// обводка для элементов li
+// 			// outline: 1px solid rgb(25, 192, 44);
+// 			a {
+// 				padding: 0 0 15px 0;
+// 				position: relative;
+// 				// text-transform: uppercase;
+// 				color: #fff;
+// 				text-align: center;
+// 				font-family: "Inter", sans-serif;
+// 				font-weight: 700;
+// 				font-size: 14px;
+// 				line-height: 17px;
+// 				margin-right: 12px;
+
+// 				a:hover {
+// 					text-decoration: none;
+// 					color: #f53b49;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	// .navigation_menu > li + li {
+// 	// 	margin-left: 20px;
+// 	// }
+// }
+
+// // !!! Линия проходящая под вкладками списка меню
+// // .navigation_menu > li > a {
+// // 	padding: 0 0 15px 0;
+// // 	position: relative;
+// // 	// text-transform: uppercase;
+// // 	color: #fff;
+// // 	text-align: center;
+// // 	font-family: "Inter", sans-serif;
+// // 	font-weight: 700;
+// // 	font-size: 14px;
+// // 	line-height: 17px;
+// // }
+// .navigation_menu > li > a:hover {
+// 	text-decoration: none;
+// 	color: #f53b49;
+// }
+// .navigation_menu > li > a:after {
+// 	width: 0;
+// 	height: 3px;
+// 	background-color: #f53b49;
+// 	content: "";
+// 	left: 0;
+// 	bottom: 10px;
+// 	position: absolute;
+// 	transition: all 0.3s;
+// }
+// .navigation_menu > li > a:hover::after {
+// 	width: 100%;
+// }
+
+// //  Вариант по Sass
+// // li {
+// // 			// display: inline-flex;
+// // 			flex-direction: column;
+// // 			align-items: flex-start;
+// // 			gap: 8px;
+// // 			margin: 0;
+// // 			white-space: nowrap;
+// // 			li + li {
+// // 				margin-left: 20px;
+// // 			}
+// // 			a {
+// // 				padding: 0 0 15px 0;
+// // 				position: relative;
+// // 				// text-transform: uppercase;
+// // 				color: #fff;
+// // 				text-align: center;
+// // 				font-family: "Inter", sans-serif;
+// // 				font-weight: 700;
+// // 				font-size: 14px;
+// // 				line-height: 17px;
+// // 				&:hover {
+// // 					text-decoration: none;
+// // 					color: #f53b49;
+// // 				}
+// // 				&::after {
+// // 					width: 0;
+// // 					height: 3px;
+// // 					background-color: #f53b49;
+// // 					content: "";
+// // 					left: 0;
+// // 					bottom: 10px;
+// // 					position: absolute;
+// // 					transition: all 0.3s;
+// // 				}
+// // 				&:hover::after {
+// // 					width: 100%;
+// // 				}
+// // 			}
+// // 		}
+
+// // !!! active - без выпадающего меню
+// .nav_menu > li.active a:after {
+// 	width: 100%;
+// }
+
+// .navigation_menu li {
+// 	margin: 0;
+// 	white-space: nowrap;
+// }
+
+// // !!! Подчёркивание текста - линией
+// .navigation_menu li.navigation-children:after {
+// 	position: absolute;
+// 	content: "\2039";
+// 	color: #f53b49;
+// 	font-size: 20px;
+// 	font-weight: bold;
+// 	right: -12px;
+// 	top: -2px;
+// 	transform: rotate(-90deg);
+// }
+// .navigation_menu li li.navigation-children:after {
+// 	position: absolute;
+// 	content: "\2039";
+// 	color: #fff;
+// 	font-size: 14px;
+// 	font-weight: bold;
+// 	right: 10px;
+// 	top: 12px;
+// 	transform: rotate(180deg);
+// }
+// .navigation_menu li.navigation-children:hover > ul {
+// 	opacity: 1;
+// 	visibility: visible;
+// 	transform: translateY(0);
+// }
+
+// // Указатель (стрелка) раскрывающегося меню по Sass
+// // .navigation_children {
+// // 	position: relative;
+// // 	margin-right: 12px;
+// // 	&::after {
+// // 		position: absolute;
+// // 		content: "\2039";
+// // 		color: #f53b49;
+// // 		font-size: 20px;
+// // 		font-weight: bold;
+// // 		right: -12px;
+// // 		top: -2px;
+// // 		transform: rotate(-90deg);
+// // 	}
+// // 	li &:after {
+// // 		position: absolute;
+// // 		content: "\25BE";
+// // 		color: #fff;
+// // 		font-size: 14px;
+// // 		font-weight: bold;
+// // 		right: 10px;
+// // 		top: 12px;
+// // 		transform: rotate(180deg);
+// // 		ul {
+// // 			opacity: 1;
+// // 			visibility: visible;
+// // 			transform: translateY(0);
+// // 		}
+// // 	}
+// // }
+
+// // Указатель раскрывающегося меню
+// .navigation_menu li.navigation_children {
+// 	position: relative;
+// 	margin-right: 12px;
+// }
+
+// .navigation_menu ul {
+// 	padding: 10px 0;
+// 	margin: 0;
+// 	list-style: none;
+// 	background-color: #f53b49;
+// 	position: absolute;
+// 	z-index: 1;
+// 	min-width: 220px;
+// 	top: 100%;
+// 	left: -30px;
+// 	opacity: 0;
+// 	visibility: hidden;
+// 	transform: translateY(5px);
+// 	transition: all 200ms cubic-bezier(0.43, 0.59, 0.16, 1.25);
+// }
+// .navigation_menu ul li {
+// 	display: block;
+// 	padding: 0 10px;
+// 	line-height: 1.1;
+// }
+// .navigation_menu ul li:last-child {
+// 	margin-bottom: 0;
+// }
+// // Раскрывающееся многоуровневое меню
+// .navigation_menu ul li a {
+// 	display: block;
+// 	color: #fff;
+// 	padding: 7px;
+// 	transition: all 0.3s;
+// 	text-decoration: none;
+// }
+// .navigation_menu ul li a:hover {
+// 	color: #f53b49;
+// 	background: #fff;
+// 	text-decoration: none;
+// }
+// .navigation_menu ul ul {
+// 	top: 0;
+// 	left: 100%;
+// }
+
+// // .navigation_menu ul {
+// // 	padding: 10px 0;
+// // 	margin: 0;
+// // 	list-style: none;
+// // 	background-color: #f53b49;
+// // 	position: absolute;
+// // 	z-index: 1;
+// // 	min-width: 220px;
+// // 	top: 100%;
+// // 	left: -30px;
+// // 	opacity: 0;
+// // 	visibility: hidden;
+// // 	transform: translateY(5px);
+// // 	transition: all 200ms cubic-bezier(0.43, 0.59, 0.16, 1.25);
+// // 	li {
+// // 		display: block;
+// // 		padding: 0 10px;
+// // 		line-height: 1.1;
+// // 		a {
+// // 			display: block;
+// // 			color: #fff;
+// // 			padding: 7px;
+// // 			transition: all 0.3s;
+// // 			text-decoration: none;
+// // 			&:hover {
+// // 				color: #f53b49;
+// // 				background: #fff;
+// // 				text-decoration: none;
+// // 			}
+// // 		}
+// // 		ul {
+// // 			top: 0;
+// // 			left: 100%;
+// // 		}
+// // 	}
+// // }
+// // }
+// // }
+// // }
+
+// // .ogl ol li:before {
+// // 	content: '\25BE';
+// // 	color: #ff0000;
+// // 	margin-left: -26px;
+// // 	padding-right: 5px;
+// // 	font-size: 22px;

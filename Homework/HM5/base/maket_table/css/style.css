@@ -1,0 +1,108 @@
+body{
+	font-family: 'Armata', sans-serif;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#container{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 950px;
+	background: rgba(233, 233, 41, 0.521);
+		}
+
+ /*--Левая колонка--*/
+ #menu{
+	padding-left: 10px;
+	width: 20%;
+	height: 100%;
+	
+}
+
+#menu h3{
+	/*margin: 30px 0 0 20px;*/
+	padding: 20px 0 0 20px;
+	/*list-style-type: disc;*/
+	line-height: 1;
+	margin-bottom: 10px;
+}
+
+ul{
+	padding-left: 20px;
+}
+
+
+#menu a{
+	color: #222222; /* Цвет ссылки */
+	text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+#menu a:visited{
+	color: #743474; /* Цвет посещённой ссылки */
+}
+
+#menu a:hover {
+	color: #f35757; /* Цвет ссылки при наведении на нее курсора мыши */  
+}
+
+/*--Правая колонка--*/
+#content{
+	margin-left: 20%;
+	min-height: 100%;
+	background: #fff;
+	padding: 0 10px;
+	}
+
+#content p{
+	text-align: justify;
+	font-family: 'Armata', sans-serif;
+	padding-bottom: 20px;
+}
+
+#content h2{
+	padding: 18px 0;
+	letter-spacing: 1px;
+	word-spacing: 3px;
+	text-align: center;
+}
+
+#content img{
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0 20px 10px 0;
+	max-width: 300px;
+	object-fit: cover;
+	float: left;
+}
+
+/*--Шапка --*/
+#top{
+	background: rgba(113, 162, 226, 0.568);
+	padding: 5px;
+	box-sizing: border-box;
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 1px;
+	word-spacing: 5px;
+	color: blue;
+	
+}
+
+/*-- Подвал --*/
+#bottom{
+	background: rgba(113, 162, 226, 0.568);
+	padding: 3px;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 1px;
+	word-spacing: 5px;
+	color: blue;
+	
+}

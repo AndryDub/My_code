@@ -1,0 +1,187 @@
+// !!! link_Bowflex - ссылка на Bowflex - categories_popular_brands
+.link_Bowflex {
+	display: flex;
+	flex-direction: column;
+	width: 1410px;
+	height: 1931px;
+	// padding-bottom: 60px;
+	margin: 0 auto;
+	// border: 1px solid rgb(3, 255, 3);
+	.tab {
+		position: relative;
+		width: 1410px;
+		height: 80px;
+		padding-top: 60px;
+		font-size: 14px;
+		line-height: 140%;
+		color: rgba(56, 66, 85, 0.6);
+		left: 24px;
+		&::before {
+			content: "";
+			background-image: url("../img/main/main_popular_brands/Vector.png");
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			left: -24px;
+		}
+	}
+	h1 {
+		font-family: "Inter", sans-serif;
+		font-weight: 800;
+		font-size: 38px;
+		line-height: 110%;
+		color: #1a1a25;
+		margin-top: 30px;
+	}
+}
+
+.container_Bowflex_description {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 1410px;
+	height: 1628px;
+	padding: 0px 0px 60px;
+	gap: 30px;
+	margin-top: 30px;
+	// border: 1px solid rgb(230, 255, 2);
+	.logo_and_website_Bowflex {
+		display: flex;
+		flex-direction: column;
+		padding: 0px 0px 60px;
+		width: 1410px;
+		height: 497px;
+		border-radius: 6px;
+		// border: 1px solid rgb(2, 86, 255);
+		.btn_back {
+			// border: 1px solid rgb(2, 209, 255);
+			.btn_Bowflex_back {
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				padding: 0px 0px 20px;
+				gap: 10px;
+				width: 44px;
+				height: 37px;
+				/* txt / button */
+				font-family: "Inter";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 17px;
+				color: #4b7ee8;
+			}
+		}
+		.website_and_img_Bowflex {
+			ul {
+				display: grid;
+				grid-template-columns: repeat(2, 705px);
+				grid-template-rows: 400px;
+				// border: 1px solid rgb(255, 3, 125);
+				li:nth-child(1) {
+					grid-column: 1;
+					grid-row: 1;
+					padding: 73px 64px 58px;
+					// border: 1px solid rgb(2, 255, 247);
+					.logo_Bowflex {
+						width: 326px;
+						height: 35px;
+						// border: 1px solid rgb(103, 2, 255);
+					}
+					p {
+						margin-top: 43px;
+						width: 538px;
+						height: 189px;
+						font-size: 18px;
+						line-height: 150%;
+						color: #1a1a25;
+					}
+					a {
+						font-family: "Inter", sans-serif;
+						font-weight: 400;
+						font-size: 18px;
+						line-height: 150%;
+						color: #4b7ee8;
+					}
+				}
+				li:nth-child(2) {
+					grid-column: 2;
+					grid-row: 1;
+					// border: 1px solid rgb(82, 255, 2);
+					img {
+						border-radius: 0px 6px 6px 0px;
+					}
+				}
+			}
+		}
+	}
+
+	.description_Bowflex {
+		.column {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			// padding: 0px 0px 60px;
+			row-gap: 60px;
+			width: 1410px;
+			height: 1220px;
+			// border: 1px solid rgb(2, 255, 133);
+			li:nth-child(1) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 30px;
+				margin: 0 240px;
+				p {
+					font-size: 18px;
+					line-height: 150%;
+					color: #1a1a25;
+				}
+			}
+			li:nth-child(2) {
+				.row {
+					display: grid;
+					grid-template-columns: repeat(2, 690px);
+					grid-template-rows: 418px;
+					column-gap: 30px;
+					width: 1410px;
+					border-bottom: 2px solid rgba(133, 143, 164, 0.5);
+					padding-bottom: 60px;
+					// border: 1px solid rgb(255, 238, 2);
+					li:first-child {
+						grid-column: 1;
+						grid-row: 1;
+						img {
+							width: 690px;
+							align-self: center;
+							border-radius: 6px 0 0 6px;
+						}
+					}
+					li:last-child {
+						grid-column: 2;
+						grid-row: 1;
+						padding: 47px 20px;
+						p {
+							font-size: 18px;
+							line-height: 150%;
+							color: #1a1a25;
+						}
+					}
+				}
+			}
+
+			li:nth-child(3) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 30px;
+				margin: 0 240px;
+				p {
+					font-size: 18px;
+					line-height: 150%;
+					color: #1a1a25;
+				}
+			}
+		}
+	}
+}

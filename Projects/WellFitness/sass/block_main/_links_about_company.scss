@@ -1,0 +1,480 @@
+// !!! links_about_company - ссылки О компании
+.links_about_company {
+	display: flex;
+	flex-direction: column;
+	width: 1410px;
+	height: 4220px;
+	// padding-bottom: 60px;
+	margin: 0 auto;
+	// border: 1px solid rgb(3, 255, 3);
+	.tab {
+		position: relative;
+		width: 1410px;
+		height: 80px;
+		padding-top: 60px;
+		font-size: 14px;
+		line-height: 140%;
+		color: rgba(56, 66, 85, 0.6);
+		left: 24px;
+		&::before {
+			content: "";
+			background-image: url("../img/main/main_about_company/Vector_home.png");
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			left: -24px;
+		}
+	}
+	h1 {
+		font-family: "Inter", sans-serif;
+		font-weight: 800;
+		font-size: 38px;
+		line-height: 110%;
+		color: #1a1a25;
+		margin-top: 30px;
+	}
+}
+
+// !!! start_page_logo - начало страницы с изображением спортинвентаря
+.start_page_logo {
+	ul {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 500px;
+		margin-top: 30px;
+		li:nth-child(1) {
+			grid-column: 1;
+			grid-row: 1;
+			padding: 60px 110px 60px 60px;
+			width: 577px;
+			height: 500px;
+			background: #1a1a25;
+			p {
+				width: 406px;
+				height: 264px;
+				font-size: 34px;
+				line-height: 130%;
+				color: #ffffff;
+				span {
+					font-family: "Inter";
+					font-style: normal;
+					font-weight: 400;
+					font-size: 34px;
+					line-height: 130%;
+					color: #f53b49;
+				}
+			}
+			li:nth-child(2) {
+				grid-column: 2;
+				grid-row: 1;
+				img {
+					width: 833px;
+					height: 500px;
+					border-radius: 0px 8px 8px 0px;
+				}
+			}
+		}
+	}
+}
+// !!! company_founded - компания основана
+.company_founded {
+	display: grid;
+	grid-template-columns: [start] 210px [line2] 1020px [end];
+	grid-auto-rows: auto;
+	column-gap: 60px;
+	padding: 0px 0px 120px;
+	height: 3500;
+	margin-top: 30px;
+	// border: 1px solid rgb(255, 2, 251);
+	.links_our_achievements {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		width: 210px;
+		height: auto;
+		border-right: 1px solid rgba(133, 143, 164, 0.2);
+		li {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 20px 0px;
+			gap: 20px;
+			width: 210px;
+			height: 64px;
+			border-bottom: 1px solid rgba(133, 143, 164, 0.2);
+			a {
+				width: 210px;
+				height: 19px;
+				font-family: "Inter", sans-serif;
+				font-weight: 700;
+				font-size: 16px;
+				line-height: 19px;
+				color: #384255;
+			}
+			a:hover {
+				color: #f53b49;
+			}
+		}
+	}
+}
+
+//!!! description_of_achievements_about_company - описание достижений нашей компании
+.description_of_achievements_about_company {
+	ul {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0px 0px 120px;
+		gap: 30px;
+		width: 1020px;
+		height: auto;
+		li:first-child {
+			p {
+				font-size: 18px;
+				line-height: 150%;
+				color: #384255;
+			}
+		}
+		// !!! bottom band - нижняя полоса подчеркивающая блок
+		.bottom_band {
+			width: 1020px;
+			height: 0px;
+			border: 1px solid rgba(133, 143, 164, 0.2);
+		}
+
+		// !!! sales_geography - map - География продаж - карта
+		.sales_geography {
+			.map ul {
+				position: relative;
+				width: 1023px;
+				height: 650px;
+				// img с картой РФ -
+				margin-right: 60px;
+				// подложка карты с поиощью "opacity: 0.7" на img - для точного позиционирования городов
+				background-image: url("../img/main/main_about_company/map_city.png");
+				// box-shadow: 0 5px 7px rgba(0,0,0,0.2);
+				.Saint-Petersburg {
+					position: absolute;
+					top: 319px;
+					left: 109px;
+				}
+				.Yaroslavl {
+					position: absolute;
+					top: 348px;
+					left: 161px;
+				}
+				.Moscow {
+					position: absolute;
+					top: 365px;
+					left: 144px;
+				}
+				.Nizhny_Novgorod {
+					position: absolute;
+					top: 364px;
+					left: 227px;
+				}
+				.Volzhsk {
+					position: absolute;
+					top: 383px;
+					left: 199px;
+				}
+				.Permian {
+					position: absolute;
+					top: 401px;
+					left: 251px;
+				}
+				.Ekaterinburg {
+					position: absolute;
+					top: 387px;
+					left: 299px;
+				}
+				.Tyumen {
+					position: absolute;
+					top: 404px;
+					left: 340px;
+				}
+				.Omsk {
+					position: absolute;
+					top: 442px;
+					left: 374px;
+				}
+				.Novosibirsk {
+					position: absolute;
+					top: 432px;
+					left: 458px;
+				}
+				.Krasnoyarsk {
+					position: absolute;
+					top: 387px;
+					left: 504px;
+				}
+				.Khabarovsk {
+					position: absolute;
+					top: 546px;
+					left: 800px;
+				}
+				.Vladivostok {
+					position: absolute;
+					top: 590px;
+					left: 792px;
+				}
+				.Rostov {
+					position: absolute;
+					top: 451px;
+					left: 150px;
+				}
+				.Volgograd {
+					position: absolute;
+					top: 461px;
+					left: 187px;
+				}
+				.Simferopol {
+					position: absolute;
+					top: 499px;
+					left: 103px;
+				}
+				.Krasnodar {
+					position: absolute;
+					top: 499px;
+					left: 142px;
+				}
+				.Stavropol {
+					position: absolute;
+					top: 519px;
+					left: 174px;
+				}
+				.Essentuki {
+					position: absolute;
+					top: 523px;
+					left: 152px;
+				}
+				img.city {
+					width: 150px;
+					height: 130px;
+					padding: 5px;
+				}
+			}
+
+			// Анимация для красной точки на карте, которая будет при наведении мерцать
+			.span {
+				display: block;
+				position: relative;
+				margin: 30px auto;
+				width: 10px;
+				height: 10px;
+				background: #f53b49;
+				border-radius: 10px;
+				cursor: pointer;
+			}
+			.span:hover::before {
+				content: "";
+				position: absolute;
+				top: -10px;
+				left: -10px;
+				width: 30px;
+				height: 30px;
+				border-radius: 30px;
+				background: #f53b49;
+				animation: animate 1.5s infinite normal ease-out;
+			}
+			@keyframes animate {
+				from {
+					transform: scale(0);
+					opacity: 0.5;
+				}
+				to {
+					transform: scale(2);
+					opacity: 0;
+				}
+			}
+
+			.tooltip {
+				position: relative;
+				display: block;
+				border-bottom: 1px dotted rgb(6, 230, 103);
+				/* Если вам нужны точки под наводимым текстом */
+			}
+
+			/* Tooltip text */
+			.tooltip .tooltiptext {
+				visibility: hidden;
+				font-size: 14px;
+				width: 160px;
+				height: 160px;
+				background-color: rgba(130, 127, 127, 0.8);
+				color: #fff;
+				text-align: center;
+				padding: 6px 0 0 0;
+				border-radius: 6px;
+				delay: 550;
+				/* Расположить текст всплывающей подсказки - относительно объекта*/
+				position: absolute;
+				left: -75px;
+				bottom: 15px;
+				z-index: 1;
+			}
+
+			/* Показывать текст всплывающей подсказки при наведении курсора на контейнер всплывающей подсказки */
+			.tooltip:hover .tooltiptext {
+				visibility: visible;
+			}
+
+			// добавление стрелки в нижнюю часть подсказки выплывающего окна
+			.tooltip .tooltiptext::after {
+				content: " ";
+				position: absolute;
+				// придаёт остый уголок внизу всплывающей подсказки
+				top: 100%;
+				left: 50%;
+				/* В нижней части всплывающей подсказки - цвет*/
+				margin-left: -8px;
+				border-width: 8px;
+				border-style: solid;
+				border-color: rgba(130, 127, 127, 0.8) transparent transparent transparent;
+			}
+		}
+		// !!! we_today - Мы сегодня - это:
+		.we_today {
+			// display: flex;
+			// flex-direction: column;
+			// align-items:flex-start;
+			// justify-content: flex-start;
+			width: 1020px;
+			height: 280px;
+			// !!! initial - отменяет наследование (контроллировать общий лендинг)-может в большом документу что-нибудь сломать!!!!
+			gap: initial;
+			padding: initial;
+							h3 {
+					font-family: "Inter", sans-serif;
+					font-weight: 800;
+					font-size: 20px;
+					line-height: 120%;
+					color: #384255;
+					margin-bottom: 10px;
+				}
+				li {
+					list-style-type: disc;
+					margin-left: 25px;
+					p {
+						font-size: 18px;
+						line-height: 150%;
+						color: #384255;
+					}
+				}
+			}
+		
+		// !!! img_we_today - картинки Мы сегодня
+		.img_we_today {
+			ul {
+				display: grid;
+				grid-template-columns: repeat(2, 495px);
+				grid-template-rows: 320px 320px;
+				gap: 30px;
+				width: 1020px;
+				height: 670px;
+				li:nth-child(1) {
+					grid-column: 1;
+					grid-row: 1;
+				}
+				li:nth-child(2) {
+					grid-column: 2;
+					grid-row: 1;
+				}
+				li:nth-child(3) {
+					grid-column: 1;
+					grid-row: 2;
+				}
+				li:nth-child(4) {
+					grid-column: 2;
+					grid-row: 2;
+				}
+				img {
+					width: 495px;
+					height: 320px;
+				}
+				// li:hover {
+				// 	transform: scale(1.1);
+				// 	transition: 0.8s;
+				// 	width: 495px;
+				// 	height: 320px;
+				// 	overflow: hidden;
+				// }
+			}
+		}
+		// reason for success - причина успеха
+		.reason_for_success {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0px;
+			gap: 20px;
+			width: 1020px;
+			height: 415px;
+			h3 {
+				font-family: "Inter", sans-serif;
+				font-weight: 800;
+				font-size: 20px;
+				line-height: 120%;
+				color: #384255;
+			}
+			p {
+				font-size: 18px;
+				line-height: 150%;
+				color: #384255;
+			}
+		}
+
+		//  img_reason for success - изображения причина успеха
+		.img_reason_for_success {
+			ul {
+				display: grid;
+				grid-template-columns: repeat(2, 495px);
+				grid-template-rows: 300px 300px;
+				gap: 30px;
+				width: 1020px;
+				height: 630px;
+				li:nth-child(1) {
+					grid-column: 1;
+					grid-row: 1;
+					img {
+						width: 495px;
+						height: 300px;
+					}
+				}
+				li:nth-child(2) {
+					grid-column: 2;
+					grid-row: 1;
+					padding: 60px 0;
+					p {
+						font-size: 18px;
+						line-height: 150%;
+						color: #384255;
+					}
+				}
+				li:nth-child(3) {
+					grid-column: 1;
+					grid-row: 2;
+					padding: 60px 0;
+					p {
+						font-size: 18px;
+						line-height: 150%;
+						color: #384255;
+					}
+				}
+				li:nth-child(4) {
+					grid-column: 2;
+					grid-row: 2;
+					img {
+						width: 495px;
+						height: 300px;
+					}
+				}
+				// img:hover {
+				// 	transform: scale(1.1);
+				// 	transition: 0.8s;
+				// 	overflow: hidden;
+				// }
+			}
+		}
+	}
+}

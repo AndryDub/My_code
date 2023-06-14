@@ -1,0 +1,28 @@
+.parent {
+	margin: 0;
+	padding: 0;
+	}
+
+.star {
+	display: flex;
+	justify-content: start;
+	flex-direction: row-reverse;
+	cursor: pointer;
+}
+
+.img {
+	display: block;
+	width: 90px;
+	height: 80px;
+	list-style-type: none;
+	background: url('img/star0.png') no-repeat;
+	transition: 0.5s;
+}
+
+.img:hover, .img:hover~.img{
+	background: url('img/star1.png') no-repeat;
+}
+
+.img:active, .img:active~.img{
+	background: url('img/star0.png') no-repeat;
+}

@@ -1,0 +1,128 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	flex-wrap: wrap;
+}
+
+body{
+	width: 100%;
+	height: 100%;
+	font-family: 'Armata', sans-serif;
+	line-height: 1.3;
+	color: #373737;
+	background: #f7f7f7;
+}
+
+#container{
+	margin: 0 auto;
+	max-width: 950px;
+	background: rgba(233, 233, 41, 0.521);
+}
+
+/* -- Верхний блок "Шапка" -- */
+#top{
+	background: rgba(113, 162, 226, 0.568);
+	padding: 20px;
+	
+}
+
+#top h2{
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 1px;
+	word-spacing: 5px;
+	color: blue;
+}
+
+ /* -- Левый контейнер -- */
+ #menu{
+	width: 200px;
+	height: 100%;
+	float: left;
+}
+
+#menu h4{
+	padding: 15px;
+	text-align: center;
+}
+
+#menu ul{
+	padding: 0 10px 0 30px;
+}
+
+#menu li{
+	font-size: 14px;
+	/*padding: 0 15px;*/
+}
+
+#menu a{
+	color: #222222; /* Цвет ссылки */
+	text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+#menu a:visited{
+	color: #743474; /* Цвет посещённой ссылки */
+}
+
+#menu a:hover {
+	color: #f35757; /* Цвет ссылки при наведении на нее курсора мыши */  
+}
+
+/*--Правая колонка--*/
+#content{
+	margin-left: 200px;
+	min-height: 100%;
+	background: #fff;
+}
+
+/*#content div{
+	background-image: url('img/boll.png'); 
+	background-repeat: repeat-y;
+	background-position: right top;
+}*/ /*-- НЕ ПОГЯЛ, КАК ПЛОДКЛЮЧИТЬ ЧЕРЕЗ ID!!!! --*/
+
+#content h3{
+	letter-spacing: 1px;
+	word-spacing: 3px;
+	text-align: center;
+	color: #222222;
+	padding: 20px;
+	display: block;
+	width: fit-content;
+	margin-left: auto; 
+	margin-right: auto;
+	font-size: 22px;
+}
+
+#content p{
+	text-align: justify;
+	padding: 10px;
+}
+
+#content img{
+	display: block;
+	padding: 10px;
+	width: 100%;
+	height: auto;
+	margin: 0 10px 5px 0;
+	max-width: 300px;
+	object-fit: cover;
+	float: left;
+}
+
+/*-- Подвал --*/
+#bottom{
+	background: rgba(113, 162, 226, 0.568);
+	padding: 20px;
+}
+
+#bottom h2{
+	font-size: 20px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 1px;
+	word-spacing: 5px;
+	color: blue;
+}

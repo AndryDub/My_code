@@ -1,0 +1,166 @@
+// !!! block_main_ideas_and_selections - Идеи и подборки
+.ideas_and_selections {
+	position: relative;
+	width: 1920px;
+	height: 756px;
+	// background: #1a1a25;
+	background-image: url("../img/main/main_ideas_and_selections/black_background.png");
+	z-index: 0;
+	.conteiner_ideas_selections {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 120px 0px 100px;
+		gap: 30px;
+		margin: 0 auto;
+		// background: #1a1a25;
+		width: 1410px;
+		height: 755px;
+		h2 {
+			color: #ffffff;
+		}
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			justify-content: space-between;
+			gap: 30px;
+			width: 1410px;
+			height: 400px;
+			position: relative;
+			// fat_burning_trainers - тренажёры для жиросжигания
+			.fat_burning_trainers {
+				position: relative;
+				width: 690px;
+				height: 400px;
+				// background: url("../sass/img/main/main_ideas_and_selections/баннер 1.png");
+				h2 {
+					position: absolute;
+					color: #ffffff;
+					gap: 20px;
+					width: 309px;
+					height: 102px;
+					left: 30px;
+					top: 30px;
+					span {
+						text-transform: uppercase;
+					}
+				}
+				.clock {
+					position: absolute;
+					width: 98px;
+					height: 106px;
+					left: 23px;
+					top: 147px;
+				}
+				p {
+					position: absolute;
+					width: 138px;
+					height: 69px;
+					left: 121px;
+					top: 168px;
+					font-size: 20px;
+					line-height: 114.94%;
+					color: #1a1a25;
+				}
+				.bowflex {
+					position: absolute;
+					width: 165px;
+					height: 63px;
+					left: 30px;
+					top: 297px;
+				}
+			}
+		}
+		// cardio_strength_training - Кардио-силовая тренировка
+		.cardio_strength_training {
+			position: relative;
+			width: 330px;
+			height: 400px;
+			// background: url("../sass/img/main/main_ideas_and_selections/баннер 2.png");
+			h2 {
+				position: absolute;
+				width: 207px;
+				height: 88px;
+				left: 30px;
+				top: 30px;
+				font-family: "Inter", sans-serif;
+				font-weight: 800;
+				font-size: 20px;
+				line-height: 110%;
+				text-transform: uppercase;
+				color: #1a1a25;
+				span {
+					font-size: 36px;
+					line-height: 110%;
+					color: #f53b49;
+				}
+			}
+		}
+		// treadmill - Беговая дорожка
+		.treadmill {
+			// display: flex;
+			position: relative;
+			width: 330px;
+			height: 400px;
+			// background-image: url("../sass/img/main/main_ideas_and_selections/баннер 3.png");
+			h2 {
+				position: absolute;
+				width: 200px;
+				height: 93px;
+				left: 29px;
+				top: 30px;
+				font-family: "Raleway", sans-serif;
+				font-weight: 900;
+				font-size: 20px;
+				line-height: 110%;
+				text-transform: uppercase;
+				color: #f53b49;
+				span {
+					font-family: "Inter", sans-serif;
+					font-weight: 800;
+					font-size: 20px;
+					line-height: 120%;
+					color: #1a1a25;
+					text-transform: none;
+				}
+			}
+			.nautilus {
+				position: absolute;
+				width: 95px;
+				height: 57px;
+				left: 29px;
+				top: 131px;
+			}
+		}
+
+		// btn_full_selection - Полная подборка
+		.btn_full_selection {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 12px 20px 13px;
+			width: 176px;
+			height: 42px;
+			/* txt / button */
+			font-family: "Inter", sans-serif;
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 17px;
+			color: #ffffff;
+		}
+
+		// стили для Animated_border_gradient
+		@keyframes animatedgradient {
+			0% {
+				background-position: 0% 50%;
+			}
+			50% {
+				background-position: 100% 50%;
+			}
+			100% {
+				background-position: 0% 50%;
+			}
+		}
+	}
+}

@@ -1,0 +1,116 @@
+// !!! main_simulators_for_home - тренажеры для дома
+.for_home {
+	width: 1410px;
+	height: 875px;
+	margin-left: auto;
+	margin-right: auto;
+	gap: 30px;
+
+	h2 {
+		margin-top: 120px;
+		margin-bottom: 30px;
+	}
+	// category_1
+	.category_1 {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(4, 330px);
+		grid-template-rows: repeat(2, 200px);
+		gap: 30px;
+	
+		//!!! общие стили навешенные на все через class="items" находятся в папке _base.scss
+		li:nth-child(1) {
+			grid-column: 1;
+			grid-row: 1/3;
+				h3 {
+				position: absolute;
+				left: 30px;
+				top: 36.43px;
+							}
+		}
+		li:nth-child(2) {
+			grid-column: 2;
+			grid-row: 1/3;
+			h3 {
+				position: absolute;
+				left: 30px;
+				top: 36.43px;
+			}
+		}
+		li:nth-child(3) {
+			h3 {
+				position: absolute;
+				left: 30.75px;
+				top: 30.43px;
+			}
+		}
+		li:nth-child(4) {
+			h3 {
+				position: absolute;
+				left: 30.75px;
+				top: 30.43px;
+			}
+		}
+		li:nth-child(5) {
+			h3 {
+				position: absolute;
+				left: 30.75px;
+				top: 30.43px;
+			}
+		}
+		li:nth-child(6) {
+			h3 {
+				position: absolute;
+				left: 30.75px;
+				top: 30.43px;
+			}
+		}
+		img {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	// !!! category_2
+	.category_2 {
+		margin-top: 30px;
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(4, 330px);
+		grid-template-rows: 280px;
+		gap: 30px;
+		li:nth-child(1) {
+			h3 {
+				position: absolute;
+				left: 30px;
+				top: 30px;
+			}
+		}
+		li:nth-child(2) {
+			h3 {
+				position: absolute;
+				left: 30px;
+				top: 30px;
+			}
+		}
+		li:nth-child(3) {
+			h3 {
+				position: absolute;
+				left: 30px;
+				top: 30px;
+			}
+		}
+		li:nth-child(4) {
+			h3 {
+				position: absolute;
+				left: 30px;
+				top: 30px;
+			}
+		}
+		img {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+}

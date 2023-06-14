@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Links_6a</title>
+</head>
+
+<body>
+
+
+
+	<div class="container">
+		<div class="content_inner">
+			<div class="one">
+				<h2>1. &lt; a &gt;</h2>
+				<a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/about.html">первая ссылка</a>
+				<a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/intro.html">вторая ссылка</a>
+				<a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/conform.html">третья ссылка</a>
+				<a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/syndata.html">четвёртая ссылка</a>
+				<a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/selector.html">пятая ссылка</a>
+			</div>
+
+
+			<div class="two">
+				<h2>2. li {display: inline;}</h2>
+				<ul>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/about.html">первая ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/intro.html">вторая ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/conform.html">третья ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/syndata.html">четвёртая ссылка</a>
+					</li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/selector.html">пятая ссылка</a></li>
+				</ul>
+			</div>
+
+			<div class="three">
+				<h2>3. li {float: left;}</h2>
+				<ul>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/about.html"
+							class="three_link">первая
+							ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/intro.html">вторая ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/conform.html">третья ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/syndata.html">четвёртая ссылка</a>
+					</li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/selector.html" class="last">пятая
+							ссылка</a></li>
+				</ul>
+			</div><br>
+
+			<div class="four">
+				<h2>4. li {display: inline-block;}</h2>
+				<ul>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/about.html">первая ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/intro.html">вторая ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/conform.html">третья ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/syndata.html">четвёртая ссылка</a>
+					</li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/selector.html">пятая ссылка</a></li>
+				</ul>
+			</div>
+
+
+			<div class="five">
+				<h2>5. ul {display: flex;}</h2>
+				<ul>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/about.html">первая ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/intro.html">вторая ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/conform.html">третья ссылка</a></li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/syndata.html">четвёртая ссылка</a>
+					</li>
+					<li><a target="_blank" alt="ссылка" href="https://www.w3.org/TR/CSS2/selector.html" class="last">пятая
+							ссылка</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="text">
+			<h2>Способ №1. &lt;a&gt;</h2>
+			<p>Создаём с помощью тега
+				<span>&lt; a &gt;</span>
+				список из пяти элементов, что автоматически приводит их в горизонтальное положение. Далее, с помощью
+				<span>border - right ;</span>
+				добавляем вертикальные полосы и окрашиваем их в красный цвет. Последней черте, закрывающей пятую сылку,
+				задаём
+				<span>border - right: none ;</span>
+				с помощью селектора
+				<span>а: last - child { }</span>
+			</p>
+
+			<h2>Способ №2. li {display: inline;}</h2>
+			<p>Создаём горизонтальное меню навигационнных ссылок с помощью элемента
+				<span> &lt; ul &gt;, &lt; li &gt;</span>,
+				путём стилизации обычному списку, свойства -
+				<span>display</span>,
+				с присвоением значения -
+				<span>inline</span>,
+				чтобы пункты списка распологались друг за другом.
+				Переопределяем пункты списка с блочных на строчные и добавляем стилевое оформление для нащего
+				горизонтального меню.
+				Далее, с помощью селектора CSS и псевдоэлемента
+				<span>::after { }</span>
+				добавляем вертикальную черту
+				<span>content: " | " ;</span>
+				и дополнительно стилизуем, придавая нужный нам вид.
+				После всего, убираем последнюю черту, закрывающую пятую ссылку с помощью
+				<span>:last - child ::after { content: " " ;}</span>.
+			</p>
+			<p class="border">
+				Второй вариант написания селекторов в данном примере:<br>
+				Для добавления разделительной полосы, можно оставить и
+				<span>border - right: 3px solid red;</span>
+				как в первом варианте.<br>
+				Также, второй вариант для расположения вертикальных полос (разделителей), немного проще, чем вышеописанный.
+				Можно в список
+				<span> &lt; li &gt;</span>,
+				додбавить через свойство
+				<span>content</span>
+				и селектора
+				<span>li + li ::before;</span>
+				он выберет все элементы
+				<span> &lt; li &gt;</span>
+				кроме первого и мы не добавляем ещё один селектор
+				<span>:last - child ::after { content: " " ;}</span>,
+			</p>
+
+			<h2>Способ №3. li {float: left;}</h2>
+			<p>Создаём горизонтальное меню навигационнных ссылок с помощью элемента
+				<span> &lt; ul &gt;, &lt; li &gt;</span>.
+				Делаем элементы списка плавающими, путём стилизации списка с присвоением значения -
+				<span>left: float</span>,
+				в результате они расположатся по горизонтали. Высота блока-контейнера
+				<span> &lt; ul &gt;</span>
+				становится равной нулю. Далее, с помощью селектора
+				<span>.three a { }</span>
+				добавляем вертикальный разделитель, и дополнительно стилизуем, через
+				<span>border-right: 3px solid red;</span>.
+				Далее, последнему элементу строчного списка создаём дополнительный класс
+				<span>.three .last</span>
+				в котором приписываем
+				<span>border-right: 0;</span>
+				и с помощью которого убираем последнюю черту, закрывающую пятую ссылку.
+			</p>
+
+			<h2>Способ №4. li {display: inline-block;}</h2>
+			<p>Создаём горизонтальное меню навигации с помощью элемента
+				<span> &lt; ul &gt;, &lt; li &gt;</span>,
+				путём стилизации списка с присвоением значения -
+				<span>.four li { display: inline - block; }</span>,
+				делаем элемент списка строчно-блочным. Элементы распологаются по горизонтали, в которых с правой стороны
+				образуется промежуток. Добавляем для ссылок
+				<span>a { display :block }</span>
+				после чего, добавляем вертикальную черту с помощью селектора
+				<span>.four li + li ::before { content: " | " ; }</span>
+				он выберет все элементы
+				<span> &lt; li &gt;</span>
+				кроме первого и далее стилизуем их, придавая нужный нам вид.
+			</p>
+			<p class="border">
+				При добавлении в селектор для ссылок
+				<span> a { }</span>
+				<span>display :block</span>,
+				все изначально выстроенные у меня в горизонталь элементы - расформировались. Ссылки и вертикальные
+				разделители
+				разхехались в отдельные строки. После чего, открыв среду разработчика было видно, что элемент
+				<span>display :block</span>
+				уже находится в
+				<span>body</span>.
+				После всех проведенных манипуляций, я удалил из селектора
+				<span>a { }</span>
+				<span>display :block</span>
+				и все элементы приобрели правильную форму горизонтального меню навигации.
+			</p>
+
+			<h2>Способ №5. ul {display: flex;}</h2>
+			<p>Создаём горизонтальное меню навигационнных ссылок с помощью элемента
+				<span>&lt; ul &gt;, &lt; li &gt;</span>.
+				Делаем элементы списка
+				<span>&lt; ul &gt;</span>
+				гибким контейнером с поиощью
+				<span>.five ul { display: flex; }</span>
+				в результате элементы списка распологаются горизонтально.
+				Добовляем для ссылок
+				<span>.five a { display: block; }</span>
+				Далее, с помощью селектора
+				<span>.five a { }</span>
+				добавляем вертикальный разделитель, и дополнительно стилизуем, через
+				<span>border-right: 3px solid red;</span>.
+				Далее, последнему элементу строчного списка создаём дополнительный класс
+				<span>.five .last { }</span>
+				в котором приписываем
+				<span>border-right: 0;</span>
+				с помощью которого убираем последнюю черту, закрывающую пятую ссылку и стилизуем.
+			</p>
+		</div>
+	</div>
+</body>
+
+</html>
