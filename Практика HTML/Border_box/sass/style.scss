@@ -3,4 +3,8 @@ div {
 	position: relative;
 	border: solid 5em #000;
 	border-image: repeating-linear-gradient(45deg, #000, #000 1.5%, transparent 1.5%, transparent 5%) 80;
+	padding: 2em;
+	width: 26em;
+	height: 23em;
+	background-size: 50% 50%;
 }
