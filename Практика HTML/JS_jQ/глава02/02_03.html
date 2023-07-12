@@ -1,29 +1,148 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Создание и использование массивов</title>
-<link href="../_css/site.css" rel="stylesheet">
-<script>
 
-</script>
+<head>
+  <meta charset="UTF-8">
+  <title>Создание и использование массивов</title>
+  <link href="../_css/site.css" rel="stylesheet">
+  <script>
+    var authors = ['Лев Толстой',
+      'Николай Гоголь',
+      'Иван тургенв',
+      'Антон Чехов'
+    ];
+  </script>
 </head>
+
 <body>
-<div class="wrapper">
-  <header>
-    JAVASCRIPT <span class="amp">и</span> jQUERY: НЕДОСТАЮЩЕЕ&nbsp;РУКОВОДСТВО
-  </header>
-  <div class="content">
-    <div class="main">
-      <h1>Создание и использование массивов</h1>
-      <script>
-		
-	  </script>
-     </div>
+  <div class="wrapper">
+    <header>
+      JAVASCRIPT <span class="amp">и</span> jQUERY: НЕДОСТАЮЩЕЕ&nbsp;РУКОВОДСТВО
+    </header>
+    <div class="content">
+      <div class="main">
+        <h1>Создание и использование массивов</h1>
+
+        <script>
+          document.write('<p>Первый автор - <strong>');
+          document.write(authors[0] + '</strong></p>');
+          document.write('<p>Последний автор - <strong>');
+          document.write(authors[authors.length - 1] + ' </strong></p>');
+          authors.unshift('Жюль Верн');
+          document.write('<p>Чуть не забыл, <strong>');
+          document.write(authors[0]);
+          document.write('<strong><p>');
+          document.write(authors.length);
+        </script>
+        <script>
+          var a = 'Иван';
+          var b = 'Иванов';
+          // alert (a + ' ' + b); // 'Иван Иванов'; 
+          console.log(a + ' ' + b);
+        </script>
+        <br><br>
+        <script>
+          var x = ('Настало время хороших программистов.');
+          document.write(x.charAt(0)); // Показывае букву (символ) 'Н' из текста, указанный в charAt(0);
+        </script>
+
+        <!-- <script>
+          if (score > 100) {
+            alert ('Вы победили!');
+          }
+        </script> -->
+
+        <script>
+          var numOfShoes = '2';
+          var numOfSocks = 4;
+          // var totalItems = +numOfShoes + numOfSocks;
+          var totalItems = Number(numOfShoes) + numOfSocks;
+          console.log(totalItems);
+        </script>
+        <!-- 
+        <script>
+          var item1 = Number(2) === 2; // true
+          console.log(item1);
+          var item2 = '2' === 3; // false
+          console.log(item2);
+          var item3 = '2' != 2; // false
+          console.log(item3);
+          var item4 = '4' == '5'; // false
+          console.log(item4);
+          var item5 = 3 !== 3; // false
+          console.log(item5);
+          var item6 = '2' !== 2; // true
+          console.log(item6);
+          var item7 = '2' >= 2; // true
+          console.log(item7);
+          var item8 = 2 > 1; // true
+          console.log(item8);
+        </script> -->
+        <!-- 
+        <script>
+          // var answer = 31;
+          if (answer == 31) {
+            alert('Верно. У Сатурна 31 луна.');
+            numCorrect += 1;
+          }
+        </script>
+        <script>
+          // var answer = 1;
+          if (answer != 31) {
+            alert ('Неверно. У Сатурна совсем не столько лун.');
+          }
+        </script>
+        <script>
+          if (enteredColor == 'red') {
+            document.body.style.backgroundColor = 'red';
+          }
+        </script> -->
+        <!-- <script>
+          var x = 4;
+          if (x == 4) {
+            // НИКАКИХ ДЕЙСТВИЙ
+          }
+          console.log(x == 4);
+        </script>
+
+        <script>
+          var valid = true;
+          if (valid) {
+
+          } else {
+            
+          }
+          console.log(valid);
+        </script> -->
+        
+        <!-- <script>
+          var answer = 31;
+          if (answer == 31) {
+            alert('Верно. У Сатурна 31 луна.');
+            numCorrect = numCorrect + 1;
+          } else {
+            alert('Неверно. У Сатурна совсем не столько лун.');
+          }
+        </script> -->
+
+        <script>
+          var fridayCash = prompt('Сколько денег вы можете потратить?', '');
+          if (fridayCash >= 1500) {
+            alert('Вы можете поужинать и пойти в кино.');
+          } else if (fridayCash >= 1000) {
+            alert('Вы можете поужинать.');
+          } else if (fridayCash >= 500) {
+            alert('Вы можете пойти в кино.');
+          } else {
+            alert('Похоже, вы будете смотреть телевизор.');
+          }
+        </script>
+      </div>
+    </div>
+    <footer>
+      <p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+    </footer>
   </div>
-  <footer>
-    <p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
-  </footer>
-</div>
 </body>
+
 </html>

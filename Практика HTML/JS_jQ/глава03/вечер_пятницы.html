@@ -1,37 +1,89 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Планирование вечера пятницы</title>
-<link href="../_css/site.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Планирование вечера пятницы</title>
+  <link href="../_css/site.css" rel="stylesheet">
 </head>
 
 <body>
-<div class="wrapper">
-  <header>
-    JAVASCRIPT <span class="amp">и</span> jQUERY: НЕДОСТАЮЩЕЕ&nbsp;РУКОВОДСТВО
-  </header>
-  <div class="content">
-    <div class="main">
-      <h1>Планирование вечера пятницы</h1>
-     <script>
-		var fridayCash = prompt('Сколько денег вы можете потратить?', '');
-    if (fridayCash >= 50) {
-      alert('Вы можете и поужинать, и пойти в кино.');
-    } else if (fridayCash >= 35) {
-      alert('Вы можете поужинать.');
-    } else if (fridayCash >= 12) {
-      alert('Вы можете пойти в кино.');
-    } else {
-      alert('Похоже, вы будете смотреть телевизор.');
-    }
+  <div class="wrapper">
+    <header>
+      JAVASCRIPT <span class="amp">и</span> jQUERY: НЕДОСТАЮЩЕЕ&nbsp;РУКОВОДСТВО
+    </header>
+    <div class="content">
+      <div class="main">
+        <h1>Планирование вечера пятницы</h1>
+        <script>
+          var dayOfWeek = prompt('Какой сегодня день недели', '');
+          if ((dayOfWeek == 'Friday') || (dayOfWeek == 'friday')) {
+            var fridayCash = prompt('Сколько денег вы можете потратить?', '');
+            if (fridayCash >= 150) {
+              alert('Вы можете и поужинать, и пойти в кино.');
+            } else if (fridayCash >= 100) {
+              alert('Вы можете поужинать.');
+            } else if (fridayCash >= 50) {
+              alert('Вы можете пойти в кино.');
+            } else {
+              alert('Похоже, вы будете смотреть телевизор.');
+            }
+          }
 
-		</script>
+        </script>
+
+        <script>
+          if (a < 10 && a > 1) {
+            // Отступ первого уровня для первой
+            //управляющей инструкции
+            alert('Значение ' + a + ' принадлежит промежутку от 1 до 10');
+            if (a == 5) {
+              // Отступ второго уровня для второй
+              //управляющей инструкции
+              alert(a + ' половина от десяти.')
+            }
+          }
+        </script>
+
+        <script>
+          var a = 1;
+          if (a > 1 && a < 10) {
+            alert('Значение ' + a + ' принадлежит промежутку от 1 до 10');
+          }
+        </script>
+
+        <script>
+          var key = 'n';
+          // if (key == 'n' || key == "N") 
+          if ((key == 'n') || (key == 'N')) {
+            // Переход (пролистывание) к следующему фото  с помощью клавиш
+          }
+          console.log(key);
+        </script>
+
+        <script>
+          var gas = 0;
+          var time = 1;
+          var car = 1;
+          if (gas <= 0 || time <= 0 || car <= 0) {
+            // Игра окончена
+          }
+          console.log(gas, time, car);
+        </script>
+
+        <script>
+          var valid = true;
+          if (!valid) {
+
+          }
+          console.log(valid);
+        </script>
       </div>
+    </div>
+    <footer>
+      <p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+    </footer>
   </div>
-  <footer>
-<p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
-  </footer>
-</div>
 </body>
+
 </html>

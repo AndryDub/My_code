@@ -1,30 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Простая викторина</title>
-<link href="../_css/site.css" rel="stylesheet">
-<script>
 
-</script>
+<head>
+  <meta charset="UTF-8">
+  <title>Простая викторина</title>
+  <link href="../_css/site.css" rel="stylesheet">
+  <script>
+    var score = 0;
+    var questions = [
+      ['Сколько лун у планеты Меркурий?', 0],
+      ['Сколько лун у планеты Венера?', 0],
+      ['Сколько лун у планеты Земля?', 1],
+      ['Сколько лун у планеты Марс?', 2],
+      ['Сколько лун у планеты Юпитер?', 79],
+      ['Сколько лун у планеты Сатурн?', 82],
+      ['Сколько лун у планеты Уран?', 27],
+      ['Сколько лун у планеты Нептун?', 14],
+      ['Сколько лун у планеты Плутон?', 5]
+    ];
+    function askQutstion(question) {
+      var answer = prompt(question[0], '');
+      if (answer == question[1]) {
+        alert('Верно!');
+        score++;
+      } else {
+        alert('Неверно. Правильный ответ ' + question[1]);
+      }
+    }
+    for (var i = 0; i < questions.length; i++) {
+      askQutstion(questions[i]);
+    }
+  </script>
 </head>
 
 <body>
-<div class="wrapper">
-  <header>
-    JAVASCRIPT <span class="amp">и</span> jQUERY: НЕДОСТАЮЩЕЕ&nbsp;РУКОВОДСТВО
-  </header>
-  <div class="content">
-    <div class="main">
-      <h1>Простая викторина</h1>
-      <script>
-		
-		</script>
+  <div class="wrapper">
+    <header>
+      JAVASCRIPT <span class="amp">и</span> jQUERY: НЕДОСТАЮЩЕЕ&nbsp;РУКОВОДСТВО
+    </header>
+    <div class="content">
+      <div class="main">
+        <h1>Простая викторина</h1>
+        <script>
+          var message = 'Вы ответили правильно на ' + score;
+          message += ' из ' + questions.length;
+          message += ' вопросов. ';
+          document.write('<p>' + message + '<p>');
+        </script>
       </div>
+    </div>
+    <footer>
+      <p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+    </footer>
   </div>
-  <footer>
-<p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
-  </footer>
-</div>
 </body>
+
 </html>

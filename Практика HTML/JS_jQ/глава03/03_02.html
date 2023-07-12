@@ -1,28 +1,90 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Использование функций</title>
-<link href="../_css/site.css" rel="stylesheet">
-<script>
 
-</script>
+<head>
+  <meta charset="UTF-8">
+  <title>Использование функций</title>
+  <link href="../_css/site.css" rel="stylesheet">
+  <script>
+    function printToday() {
+      var today = new Date();
+      document.write(today.toDateString()); 
+    }
+
+    // function print(message) {
+    //   document.write(message);
+    // }
+      function print(message, tag) {
+        document.write('<'+ tag + '>' + message + '</' + tag + '>');
+      }
+
+  </script>
 </head>
 
 <body>
-<div class="wrapper">
-  <header>
-    JAVASCRIPT <span class="amp">и</span> jQUERY: НЕДОСТАЮЩЕЕ&nbsp;РУКОВОДСТВО
-  </header>
-  <div class="content">
-    <div class="main">
-      <h1>Использование функций</h1>
-      <p>Сегодня <strong> </strong></p>
+  <div class="wrapper">
+    <header>
+      JAVASCRIPT <span class="amp">и</span> jQUERY: НЕДОСТАЮЩЕЕ&nbsp;РУКОВОДСТВО
+    </header>
+    <div class="content">
+      <div class="main">
+        <h1>Использование функций</h1>
+        <p>Сегодня <strong>
+            <script>
+              printToday();
+            </script>
+          </strong></p>
+      </div>
+
+      <script>
+        // print('<p><strong>Hello World!<strong><p>');
+          print('Привет, Мир!', 'p');
+      </script>
+
+      <!-- <script>
+        var num = 1;
+        while (num <= 5) {
+          document.write('Число ' + num + '<br>');
+          num += 1;
+        }
+      </script>
+      <br>
+      <script>
+        var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satuday', 'Sunday'];
+        var counter = 0;
+        while (counter < days.length) {
+          document.write(days[counter] + ', ');
+          counter++;
+        }
+      </script>
+      <br><br>
+
+      <script>
+        for (var num = 1; num <= 30; num++) {
+          console.log('Число ' + num + '<br>');
+        }
+      </script>
+      
+      <script>
+        var days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satuday', 'Sunday'];
+        for (var i = 0; i < days.length; i++) {
+          document.write(days[i] + ', ');
+        }
+      </script>
+      <br><br>
+
+      <script>
+        var example = ['первый', 'второй', 'третий', 'последний'];
+        for (var j = example.length - 1; j >= 0; j--) {
+          document.write(example[j] + '<br>');
+        }
+      </script> -->
+
     </div>
+    <footer>
+      <p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
+    </footer>
   </div>
-  <footer>
-   <p>JavaScript и jQuery: Недостающее Руководство, Дэвид МакФарланд.</p>
-  </footer>
-</div>
 </body>
+
 </html>

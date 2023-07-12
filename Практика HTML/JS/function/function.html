@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="function.js"></script>
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		var saleTotal = calculateTotal(2, 16);
+		document.write('Общая стоимость: ' + saleTotal);
+	</script>
+	<br>
+	<script>
+		var totalTAX = sumTotal(2, 16);
+		document.write('В том числе НДС: ' + totalTAX);
+	</script>
+	<br><br>
+	<hr>
+
+	<!-- А можно и таким способом, не возвращая сохраненное значение в переменной -->
+	<script>
+		document.write('Total cost: ' + calculateTotal(2, 16));
+	</script>
+	<br>
+	<script>
+		document.write('Including VAT: ' + sumTotal(2, 16));
+	</script>
+
+	<!-- Переменная в качестве параметров -->
+	<script>
+		warning('Внутри функции'); // 'Внутри функции'
+		alert(message); // 'За пределами функциии'
+	</script>
+	<br><br>
+	<hr>
+
+	<!-- Переменная, созданная внутри функции -->
+	<script>
+		warning_1(); // 'Внутри функции'
+		console.log(message1); // 'За пределами функциии'
+	</script>
+
+	<!-- Глобальная переменная -->
+	<script>
+		warning_2(); // 'Глобальная переменная'
+	</script>
+
+
+</body>
+
+</html>

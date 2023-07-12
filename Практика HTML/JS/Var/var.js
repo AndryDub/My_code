@@ -14,10 +14,14 @@ var itemsOrdered = 15;
 var totalCost = price * itemsOrdered;
 
 var numOfVisits = 101;
-var message = 'Вы посетили этот сайт'
-+ numOfVisits + 'раз.';
+var message = 'Вы посетили этот сайт '
+	+ numOfVisits + ' раз.';
 
 var numOFShoes = '2';
 var numOfSocks = 4;
-var totalItems = Number (numOFShoes) + numOfSocks;
+var totalItems = Number(numOFShoes) + numOfSocks;
 var shoePrice = numOFShoes * numOfSocks;
+
+var name = 'Andry';
+var message1 = 'Hello';
+message1 += ' ' + name;
