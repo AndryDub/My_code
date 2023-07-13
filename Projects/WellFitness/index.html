@@ -11,13 +11,27 @@
 		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Raleway:ital,wght@0,800;0,900;1,500&display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet" href="css/main.css">
-	<script defer src="js/jquery-3.7.0.min.js"></script>
+	<!--Подключаем библиотеку-->
+	<!-- атрибута defer или async. Эти атрибуты будут «говорить» браузеру, что скрипт нужно загрузить в фоне, не останавливая при этом основной поток обработки страницы. Это позволит сделать сайт более производительным. -->
+	<!-- <script defer src="js/jquery-3.7.0.min.js"></script> -->
+
+	<!-- Подключаем jQuery с CDN "CDN (Content Delivery Network) – это технология, которая позволяет увеличить скорость доставки контента конечным пользователям." Т.е. CDN предоставляет ещё один способ подключить библиотеку jQuery. При этом непосредственно загружать его себе на сервер не нужно, он будет браться с CDN. Загрузку jQuery с CDN предоставляют множество компаний, например, таких как Google, Microsoft, Cloudflare, jQuery, Yandex и т.д. -->
+	<!-- подключение библиотеки с помощью jquery google ссайта: __jquery.com__ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 
 	<title>Well_Fitness</title>
 
 </head>
 
 <body>
+	<!-- С помощью этого кода можно узнать номер версии jQuery и вывести его на консоль: -->
+	<script>
+		if (window.jQuery) {
+			var verJquery = jQuery.fn.jquery;
+			// выведем версию jQuery в консоль
+			console.log(verJquery);
+		}
+	</script>
 
 	<!--!!! Header_content -->
 	<header>
@@ -418,12 +432,6 @@
 
 	<!--!!! Main_content -->
 	<main>
-		<script>
-			if (window.jQuery) {
-      var vJq = jQuery.fn.jquery;
-      console.log(vJq);
-    }
-		</script>
 		<!-- !!! banner_list -->
 		<section class="banner_list">
 			<ul>
